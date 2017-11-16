@@ -372,7 +372,7 @@ public class Pokedex
 		p146.addToTypeList("Flying");
 		addToDexList(p146);
 		
-		//Dratini-Dragonite goes here TEST
+		//Dratini-Dragonite goes here TEST2
 		
 		//Mewtwo
 		Pokemon p150 = new Pokemon("Mewtwo");
