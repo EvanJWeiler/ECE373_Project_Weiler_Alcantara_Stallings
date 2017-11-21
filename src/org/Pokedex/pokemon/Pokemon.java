@@ -159,5 +159,4 @@ public class Pokemon
 	public void setSpritePic(Image spritePic) {
 		this.spritePic = spritePic;
 	}
-// diego is ass
 }
