@@ -67,7 +67,7 @@ public class PokedexGUI extends JFrame {
 		searchButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				LaunchSearchScreen();
+				LaunchSearchScreen(); //FIXME: Implement Search
 			}
 		});
 		JButton matchupButton = new JButton("Matchup");
@@ -528,7 +528,6 @@ public class PokedexGUI extends JFrame {
 		
 		//FIXME: add recommendation level bar
 		
-		
 		//initialize bottomLeft Labels
 		JLabel numL = new JLabel("Num: " + num1);
 		numL.setAlignmentX(LEFT_ALIGNMENT);
@@ -610,11 +609,11 @@ public class PokedexGUI extends JFrame {
 	
 	public ArrayList<Pokemon> searchPokemon(int aNum, String aName, String aType1, String aType2, int aGen, boolean aIsLegendary) {
 		ArrayList<Pokemon> searchResult = new ArrayList<Pokemon>();
-		
+		//FIXME: Implement Search
 		return searchResult;
 	}
 	
-	public void setButtonActions(ArrayList<JButton> buttons) {
+	public void setButtonActions(ArrayList<JButton> buttons) { //FIXME: add all actionlisteners
 		buttons.get(0).addActionListener(new ActionListener() {
 			
 			@Override

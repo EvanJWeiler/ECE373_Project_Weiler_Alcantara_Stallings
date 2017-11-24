@@ -42,7 +42,7 @@ public class Pokedex
 		return tempList;
 	}
 	
-	public void addGenerationOne()
+	public void addGenerationOne() //FIXME: finish adding pokemon
 	{	
 		//Bulbasaur
 		Pokemon p1 = new Pokemon("Bulbasaur");
