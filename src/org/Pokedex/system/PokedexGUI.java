@@ -26,8 +26,6 @@ public class PokedexGUI extends JFrame {
 		setLocation(200,50);
 		
 		setLayout(new FlowLayout(FlowLayout.CENTER));
-		
-		//add(new JLabel("Pokemon Go Companion"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		launchDexScreen();
@@ -77,15 +75,16 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				LaunchMathcupScreen();
+				LaunchMatchupOutputScreen("0", null, null, null, "0.0", "0", null, null, null, "0.0"); //FIXME remove after testing
 			}
 		});
 		
 		//initialize image
+		//FIX ME: load Pokemon images from currPokemon variable
 		BufferedImage image = null;
 		try {
 			image = ImageIO.read(getClass().getResourceAsStream("white.jpg"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		JLabel imgLabel = new JLabel(new ImageIcon(image));
@@ -95,7 +94,6 @@ public class PokedexGUI extends JFrame {
 		ArrayList<JButton> buttons = new ArrayList<JButton>();
 		for (int i = 0; i < p1.getDexList().size(); ++i) {
 			JButton pokeButton = new JButton(p1.getDexList().get(i).getPokeNum() + "   " + p1.getDexList().get(i).getName());
-			
 			
 			pokeButton.setAlignmentX(CENTER_ALIGNMENT);
 			listPanel.add(pokeButton);
@@ -116,7 +114,6 @@ public class PokedexGUI extends JFrame {
 		structure.add(topPanel);
 		structure.add(bottomPanel);
 		add(structure);
-		
 		
 	}
 	
@@ -274,6 +271,10 @@ public class PokedexGUI extends JFrame {
 		JRadioButton yes = new JRadioButton("Yes");
 		JRadioButton no = new JRadioButton("No", true);
 		ButtonGroup yesOrNo = new ButtonGroup();
+		if (yes.isSelected())
+			legendarySelect = true;
+		else
+			legendarySelect = false;
 		yesOrNo.add(yes);
 		yesOrNo.add(no);
 		
@@ -409,7 +410,19 @@ public class PokedexGUI extends JFrame {
 		okButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				LaunchMatchupOutputScreen();
+				if (numFieldL.getText().isEmpty() || nameFieldL.getText().isEmpty() || type1FieldL.getText().isEmpty() || cpFieldL.getText().isEmpty() || numFieldR.getText().isEmpty() || nameFieldR.getText().isEmpty() || type1FieldR.getText().isEmpty() || cpFieldR.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(new JFrame(), "Please fill out required fields", "Information Missing", JOptionPane.WARNING_MESSAGE);
+				}
+				else {
+					if (type2FieldL.getText().isEmpty() && type2FieldR.getText().isEmpty())
+						LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), type1FieldL.getText(), "N/A", cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), type1FieldR.getText(), "N/A", cpFieldR.getText());
+					else if (type2FieldL.getText().isEmpty())
+						LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), type1FieldL.getText(), "N/A", cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), type1FieldR.getText(), type2FieldR.getText(), cpFieldR.getText());
+					else if (type2FieldR.getText().isEmpty())
+						LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), type1FieldL.getText(), type2FieldL.getText(), cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), type1FieldR.getText(), "N/A", cpFieldR.getText());
+					else
+						LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), type1FieldL.getText(), type2FieldL.getText(), cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), type1FieldR.getText(), type2FieldR.getText(), cpFieldR.getText());
+				}
 			}
 		});
 		cancelButton.addActionListener(new ActionListener() {
@@ -471,8 +484,128 @@ public class PokedexGUI extends JFrame {
 		
 	}
 	
-	public void LaunchMatchupOutputScreen() {
+	public void LaunchMatchupOutputScreen(String num1, String name1, String type11, String type12, String cp1, String num2, String name2, String type21, String type22, String cp2) {
+		JFrame frame = new JFrame("Matchup Output");
+		JPanel structure = new JPanel();
+		JPanel topPanel = new JPanel();
+		JPanel bottomPanel = new JPanel();
+		JPanel bottomLeft = new JPanel();
+		JPanel bottomRight = new JPanel();
+		JPanel buttonPanel = new JPanel();
 		
+		//calculate IVs
+		//FIXME add declaration for IV calc function
+		double iv1 = 0.0; //FIXME: change to result of IV calculation
+		double iv2 = 0.0; //FIXME: change to result of IV calculation
+		
+		//set Layouts
+		topPanel.setLayout(new FlowLayout());
+		bottomPanel.setLayout(new FlowLayout());
+		bottomLeft.setLayout(new BoxLayout(bottomLeft, BoxLayout.PAGE_AXIS));
+		bottomRight.setLayout(new BoxLayout(bottomRight, BoxLayout.PAGE_AXIS));
+		buttonPanel.setLayout(new FlowLayout());
+		structure.setLayout(new BoxLayout(structure, BoxLayout.PAGE_AXIS));
+		
+		//initialize components of topPanel
+		JLabel vs = new JLabel("VS");
+		//FIXME: add getPokemonSpritePics
+		BufferedImage image1 = null;
+		try {
+			image1 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		JLabel imgLabel1 = new JLabel(new ImageIcon(image1));
+		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
+		BufferedImage image2 = null;
+		try {
+			image2 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		JLabel imgLabel2 = new JLabel(new ImageIcon(image2));
+		imgLabel2.setAlignmentX(CENTER_ALIGNMENT);
+		
+		//FIXME: add recommendation level bar
+		
+		
+		//initialize bottomLeft Labels
+		JLabel numL = new JLabel("Num: " + num1);
+		numL.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel nameL = new JLabel("Name: " + name1);
+		nameL.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel type1L = new JLabel("Type1: " + type11);
+		type1L.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel type2L = new JLabel("Type2: " + type12);
+		type2L.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel cpL = new JLabel("CP: " + cp1);
+		cpL.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel ivL = new JLabel("IV: " + iv1);
+		ivL.setAlignmentX(LEFT_ALIGNMENT);
+		
+		//initialize bottomRight Labels
+		JLabel numR = new JLabel("Num: " + num2);
+		numR.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel nameR = new JLabel("Name: " + name2);
+		nameR.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel type1R = new JLabel("Type1: " + type21);
+		type1R.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel type2R = new JLabel("Type2: " + type22);
+		type2R.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel cpR = new JLabel("CP: " + cp2);
+		cpR.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel ivR = new JLabel("IV: " + iv2);
+		ivR.setAlignmentX(LEFT_ALIGNMENT);
+		
+		//setup Buttons
+		JButton closeButton = new JButton("Close");
+		closeButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+			}
+		});
+		
+		//add to topPanel
+		topPanel.add(imgLabel1);
+		topPanel.add(vs);
+		topPanel.add(imgLabel2);
+		
+		//add to bottomLeft
+		bottomLeft.add(numL);
+		bottomLeft.add(nameL);
+		bottomLeft.add(type1L);
+		bottomLeft.add(type2L);
+		bottomLeft.add(cpL);
+		bottomLeft.add(ivL);
+		
+		//add to bottomRight
+		bottomRight.add(numR);
+		bottomRight.add(nameR);
+		bottomRight.add(type1R);
+		bottomRight.add(type2R);
+		bottomRight.add(cpR);
+		bottomRight.add(ivR);
+		
+		//add to buttonPanel
+		buttonPanel.add(closeButton);
+		
+		//add to bottomPanel
+		bottomLeft.setAlignmentX(LEFT_ALIGNMENT);
+		bottomRight.setAlignmentX(RIGHT_ALIGNMENT);
+		bottomPanel.add(bottomLeft);
+		bottomPanel.add(bottomRight);
+		
+		//add to structure
+		structure.add(topPanel);
+		structure.add(bottomPanel);
+		structure.add(buttonPanel);
+		
+		frame.add(structure);
+		frame.setSize(600, 600);
+		frame.setLocation(500, 150);
+		frame.pack();
+		frame.setVisible(true);
 	}
 	
 	public ArrayList<Pokemon> searchPokemon(int aNum, String aName, String aType1, String aType2, int aGen, boolean aIsLegendary) {
