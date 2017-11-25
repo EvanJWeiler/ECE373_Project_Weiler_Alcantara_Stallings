@@ -5,8 +5,8 @@ import java.awt.*;
 public class Pokemon 
 {
 	private int pokeNum;
-	private int height;
 	private int generation;
+	private double height;
 	private double weight;
 	private boolean isLegendary;
 	private String name;
@@ -24,7 +24,7 @@ public class Pokemon
 		weight = -1;
 		isLegendary = false;
 		name = "EMPTY";
-		gender = "EMPTY";
+		gender = "Male/Female";
 		moveset = new ArrayList<String>();
 		type = new ArrayList<String>();
 		evoFamily = new ArrayList<Pokemon>();
@@ -38,6 +38,7 @@ public class Pokemon
 	
 	public Pokemon(int aNum, int aHeight, int aGen, double aWeight, boolean aLegBool, String aName, String aGender)
 	{
+		this();
 		pokeNum = aNum;
 		height = aHeight;
 		generation = aGen;
@@ -57,12 +58,12 @@ public class Pokemon
 		this.pokeNum = pokeNum;
 	}
 	
-	public int getHeight() 
+	public double getHeight() 
 	{
 		return height;
 	}
 	
-	public void setHeight(int height) 
+	public void setHeight(double height) 
 	{
 		this.height = height;
 	}

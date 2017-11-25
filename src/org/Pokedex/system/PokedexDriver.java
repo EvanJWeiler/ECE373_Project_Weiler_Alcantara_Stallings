@@ -11,8 +11,6 @@ public class PokedexDriver
 		Pokedex myPokedex = new Pokedex();
 		PokedexGUI newGUI;
 		
-		myPokedex.addGenerationOne();
-		
 		newGUI = new PokedexGUI(myPokedex);
 		
 	}

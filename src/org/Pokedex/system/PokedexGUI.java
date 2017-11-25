@@ -83,7 +83,7 @@ public class PokedexGUI extends JFrame {
 		//FIX ME: load Pokemon images from currPokemon variable
 		BufferedImage image = null;
 		try {
-			image = ImageIO.read(getClass().getResourceAsStream("white.jpg"));
+			image = ImageIO.read(getClass().getResourceAsStream("resources/bulbasaur.jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -142,7 +142,7 @@ public class PokedexGUI extends JFrame {
 		//initialize image
 		BufferedImage image = null;
 		try {
-			image = ImageIO.read(getClass().getResourceAsStream("white.jpg"));
+			image = ImageIO.read(getClass().getResourceAsStream("resources/white.jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -185,7 +185,7 @@ public class PokedexGUI extends JFrame {
 		//setup EVO Section
 		BufferedImage image1 = null;
 		try {
-			image1 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+			image1 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -193,7 +193,7 @@ public class PokedexGUI extends JFrame {
 		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
 		BufferedImage image2 = null;
 		try {
-			image2 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+			image2 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -201,7 +201,7 @@ public class PokedexGUI extends JFrame {
 		imgLabel2.setAlignmentX(CENTER_ALIGNMENT);
 		BufferedImage image3 = null;
 		try {
-			image3 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+			image3 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -340,7 +340,7 @@ public class PokedexGUI extends JFrame {
 		JLabel vs = new JLabel("VS");
 		BufferedImage image1 = null;
 		try {
-			image1 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+			image1 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -348,7 +348,7 @@ public class PokedexGUI extends JFrame {
 		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
 		BufferedImage image2 = null;
 		try {
-			image2 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+			image2 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -511,7 +511,7 @@ public class PokedexGUI extends JFrame {
 		//FIXME: add getPokemonSpritePics
 		BufferedImage image1 = null;
 		try {
-			image1 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+			image1 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -519,7 +519,7 @@ public class PokedexGUI extends JFrame {
 		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
 		BufferedImage image2 = null;
 		try {
-			image2 = ImageIO.read(getClass().getResourceAsStream("white128.png"));
+			image2 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -607,11 +607,11 @@ public class PokedexGUI extends JFrame {
 		frame.setVisible(true);
 	}
 	
-	public ArrayList<Pokemon> searchPokemon(int aNum, String aName, String aType1, String aType2, int aGen, boolean aIsLegendary) {
+	/*public ArrayList<Pokemon> searchPokemon(int aNum, String aName, String aType1, String aType2, int aGen, boolean aIsLegendary) {
 		ArrayList<Pokemon> searchResult = new ArrayList<Pokemon>();
 		//FIXME: Implement Search
 		return searchResult;
-	}
+	}*/
 	
 	public void setButtonActions(ArrayList<JButton> buttons) { //FIXME: add all actionlisteners
 		buttons.get(0).addActionListener(new ActionListener() {
@@ -790,5 +790,266 @@ public class PokedexGUI extends JFrame {
 				
 			}
 		});
+		buttons.get(22).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(22);
+				
+			}
+		});
+		buttons.get(23).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(23);
+				
+			}
+		});
+		buttons.get(24).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(24);
+				
+			}
+		});
+		buttons.get(25).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(25);
+				
+			}
+		});
+		buttons.get(26).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(26);
+				
+			}
+		});
+		buttons.get(27).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(27);
+				
+			}
+		});
+		buttons.get(28).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(28);
+				
+			}
+		});
+		buttons.get(29).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(29);
+				
+			}
+		});
+		buttons.get(30).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(30);
+				
+			}
+		});
+		buttons.get(31).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(31);
+				
+			}
+		});
+		buttons.get(32).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(32);
+				
+			}
+		});
+		buttons.get(33).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(33);
+				
+			}
+		});
+		buttons.get(34).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(34);
+				
+			}
+		});
+		buttons.get(35).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(35);
+				
+			}
+		});
+		buttons.get(36).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(36);
+				
+			}
+		});
+		buttons.get(37).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(37);
+				
+			}
+		});
+		buttons.get(38).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(38);
+				
+			}
+		});
+		buttons.get(39).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(39);
+				
+			}
+		});
+		buttons.get(40).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(40);
+				
+			}
+		});
+		buttons.get(41).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(41);
+				
+			}
+		});
+		buttons.get(42).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(42);
+				
+			}
+		});
+		buttons.get(43).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(43);
+				
+			}
+		});
+		buttons.get(44).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(44);
+				
+			}
+		});
+		buttons.get(45).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(45);
+				
+			}
+		});
+		buttons.get(46).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(46);
+				
+			}
+		});
+		buttons.get(47).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(47);
+				
+			}
+		});
+		buttons.get(48).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(48);
+				
+			}
+		});
+		buttons.get(49).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(49);
+				
+			}
+		});
+		buttons.get(50).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(50);
+				
+			}
+		});
+		buttons.get(51).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(51);
+				
+			}
+		});
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
