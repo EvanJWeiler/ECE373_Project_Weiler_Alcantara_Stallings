@@ -79,17 +79,16 @@ public class PokedexGUI extends JFrame {
 			}
 		});
 		
-		//initialize image
-		//FIX ME: load Pokemon images from currPokemon variable
-		BufferedImage image = null;
+		//FIXME: make image update when button clicked
+		currPokemon = p1.getDexList().get(0);
+		JLabel imgLabel = new JLabel();
 		try {
-			image = ImageIO.read(getClass().getResourceAsStream("resources/bulbasaur.jpg"));
+			imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
-		JLabel imgLabel = new JLabel(new ImageIcon(image));
 		imgLabel.setAlignmentX(CENTER_ALIGNMENT);
-		
+			
 		//initialize Pokemon list
 		ArrayList<JButton> buttons = new ArrayList<JButton>();
 		for (int i = 0; i < p1.getDexList().size(); ++i) {
@@ -142,7 +141,7 @@ public class PokedexGUI extends JFrame {
 		//initialize image
 		BufferedImage image = null;
 		try {
-			image = ImageIO.read(getClass().getResourceAsStream("resources/white.jpg"));
+			image = ImageIO.read(getClass().getResourceAsStream(pn1.getSpritePic()));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -151,10 +150,11 @@ public class PokedexGUI extends JFrame {
 		
 		//create string of types
 		StringBuilder types = new StringBuilder();
-		for (int i = 0; i < pn1.getTypeList().size(); ++i) {
-			types.append(pn1.getTypeList().get(i));
-			if (pn1.getTypeList().size() > 1 && i != 1)
-				types.append("/");
+		if (pn1.getTypeList().get(1) == null) {
+			types.append(pn1.getTypeList().get(0));
+		}
+		else {
+			types.append(pn1.getTypeList().get(0) + "/" + pn1.getTypeList().get(1));
 		}
 		JLabel typesLabel = new JLabel(types.toString());
 		typesLabel.setAlignmentX(CENTER_ALIGNMENT);
@@ -165,8 +165,8 @@ public class PokedexGUI extends JFrame {
 		//initialize info section
 		JLabel num = new JLabel("Num: " + pn1.getPokeNum());
 		JLabel name = new JLabel("Name: " + pn1.getName());
-		JLabel height = new JLabel("Height: " + pn1.getHeight());
-		JLabel weight = new JLabel("Weight: " + pn1.getWeight());
+		JLabel height = new JLabel("Height: " + pn1.getHeight() + " m");
+		JLabel weight = new JLabel("Weight: " + pn1.getWeight() + " kg");
 		StringBuilder moveset = new StringBuilder();
 		for (int i = 0; i < pn1.getMoveset().size(); ++i) {
 			types.append(pn1.getMoveset().get(i));
@@ -185,31 +185,37 @@ public class PokedexGUI extends JFrame {
 		//setup EVO Section
 		BufferedImage image1 = null;
 		try {
-			image1 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
+			image1 = ImageIO.read(getClass().getResourceAsStream(pn1.getEvoFamily().get(0).getSpritePic()));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
 		JLabel imgLabel1 = new JLabel(new ImageIcon(image1));
 		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
-		BufferedImage image2 = null;
-		try {
-			image2 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
-		JLabel imgLabel2 = new JLabel(new ImageIcon(image2));
-		imgLabel2.setAlignmentX(CENTER_ALIGNMENT);
-		BufferedImage image3 = null;
-		try {
-			image3 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
-		JLabel imgLabel3 = new JLabel(new ImageIcon(image3));
-		imgLabel3.setAlignmentX(CENTER_ALIGNMENT);
 		evoPics.add(imgLabel1);
-		evoPics.add(imgLabel2);
-		evoPics.add(imgLabel3);
+		
+		if (pn1.getEvoFamily().size() > 1) {
+			BufferedImage image2 = null;
+			try {
+				image2 = ImageIO.read(getClass().getResourceAsStream(pn1.getEvoFamily().get(1).getSpritePic()));
+			} catch (IOException e) {
+				e.printStackTrace();
+			} 
+			JLabel imgLabel2 = new JLabel(new ImageIcon(image2));
+			imgLabel2.setAlignmentX(CENTER_ALIGNMENT);
+			evoPics.add(imgLabel2);
+		}
+		
+		if (pn1.getEvoFamily().size() > 2) {
+			BufferedImage image3 = null;
+			try {
+				image3 = ImageIO.read(getClass().getResourceAsStream(pn1.getEvoFamily().get(2).getSpritePic()));
+			} catch (IOException e) {
+				e.printStackTrace();
+			} 
+			JLabel imgLabel3 = new JLabel(new ImageIcon(image3));
+			imgLabel3.setAlignmentX(CENTER_ALIGNMENT);
+			evoPics.add(imgLabel3);
+		}
 		
 		closeButton.addActionListener(new ActionListener() {
 			@Override
@@ -1032,24 +1038,3 @@ public class PokedexGUI extends JFrame {
 		});
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

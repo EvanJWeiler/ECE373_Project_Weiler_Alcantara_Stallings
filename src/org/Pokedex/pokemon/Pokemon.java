@@ -14,7 +14,7 @@ public class Pokemon
 	private ArrayList<String> moveset;
 	private ArrayList<String> type;
 	private ArrayList<Pokemon> evoFamily;
-	private Image spritePic;
+	private String spritePic;
 	
 	public Pokemon()
 	{
@@ -153,11 +153,11 @@ public class Pokemon
 		return 1;
 	}
 
-	public Image getSpritePic() {
+	public String getSpritePic() {
 		return spritePic;
 	}
 
-	public void setSpritePic(Image spritePic) {
+	public void setSpritePic(String spritePic) {
 		this.spritePic = spritePic;
 	}
 }

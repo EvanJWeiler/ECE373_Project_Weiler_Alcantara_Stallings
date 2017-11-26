@@ -52,6 +52,7 @@ public class Pokedex
 		p1.setWeight(6.9);
 		p1.addToTypeList("Grass");
 		p1.addToTypeList("Poison");
+		p1.setSpritePic("resources/bulbasaur.jpg");
 		addToDexList(p1);
 		
 		//Ivysaur
@@ -62,6 +63,7 @@ public class Pokedex
 		p2.setWeight(13.0);
 		p2.addToTypeList("Grass");
 		p2.addToTypeList("Poison");
+		p2.setSpritePic("resources/white.jpg");//FIXME: change after adding correct sprite
 		addToDexList(p2);
 		
 		//Venusaur
@@ -72,6 +74,7 @@ public class Pokedex
 		p3.setWeight(100.0);
 		p3.addToTypeList("Grass");
 		p3.addToTypeList("Poison");
+		p3.setSpritePic("resources/bulbasaur.jpg"); //FIXME: change after adding correct sprite
 		addToDexList(p3);
 		
 		//BulbEvoFam
@@ -93,6 +96,7 @@ public class Pokedex
 		p4.setWeight(8.5);
 		p4.addToTypeList("Fire");
 		p4.addToTypeList(null);
+		p4.setSpritePic("resources/white.jpg"); //FIXME: change after adding correct sprite
 		addToDexList(p4);
 		
 		//Charmeleon
