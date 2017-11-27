@@ -1036,5 +1036,141 @@ public class PokedexGUI extends JFrame {
 				
 			}
 		});
+		buttons.get(52).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(52);
+				
+			}
+		});
+		buttons.get(53).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(53);
+				
+			}
+		});
+		buttons.get(54).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(54);
+				
+			}
+		});
+		buttons.get(55).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(55);
+				
+			}
+		});
+		buttons.get(56).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(56);
+				
+			}
+		});
+		buttons.get(57).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(57);
+				
+			}
+		});
+		buttons.get(58).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(58);
+				
+			}
+		});
+		buttons.get(59).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(59);
+				
+			}
+		});
+		buttons.get(60).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(60);
+				
+			}
+		});
+		buttons.get(61).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(61);
+				
+			}
+		});
+		buttons.get(62).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(62);
+				
+			}
+		});
+		buttons.get(63).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(63);
+				
+			}
+		});
+		buttons.get(64).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(64);
+				
+			}
+		});
+		buttons.get(65).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(65);
+				
+			}
+		});
+		buttons.get(66).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(66);
+				
+			}
+		});
+		buttons.get(67).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(67);
+				
+			}
+		});
+		buttons.get(68).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(68);
+				
+			}
+		});
 	}
 }

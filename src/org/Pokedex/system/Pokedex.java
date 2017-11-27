@@ -52,7 +52,7 @@ public class Pokedex
 		p1.setWeight(6.9);
 		p1.addToTypeList("Grass");
 		p1.addToTypeList("Poison");
-		p1.setSpritePic("resources/bulbasaur.jpg");
+		p1.setSpritePic("resources/1.png");
 		addToDexList(p1);
 		
 		//Ivysaur
@@ -63,7 +63,7 @@ public class Pokedex
 		p2.setWeight(13.0);
 		p2.addToTypeList("Grass");
 		p2.addToTypeList("Poison");
-		p2.setSpritePic("resources/white.jpg");//FIXME: change after adding correct sprite
+		p2.setSpritePic("resources/2.png");//FIXME: change after adding correct sprite
 		addToDexList(p2);
 		
 		//Venusaur
@@ -74,7 +74,7 @@ public class Pokedex
 		p3.setWeight(100.0);
 		p3.addToTypeList("Grass");
 		p3.addToTypeList("Poison");
-		p3.setSpritePic("resources/bulbasaur.jpg"); //FIXME: change after adding correct sprite
+		p3.setSpritePic("resources/3.png"); //FIXME: change after adding correct sprite
 		addToDexList(p3);
 		
 		//BulbEvoFam
@@ -96,7 +96,7 @@ public class Pokedex
 		p4.setWeight(8.5);
 		p4.addToTypeList("Fire");
 		p4.addToTypeList(null);
-		p4.setSpritePic("resources/white.jpg"); //FIXME: change after adding correct sprite
+		p4.setSpritePic("resources/4.png"); //FIXME: change after adding correct sprite
 		addToDexList(p4);
 		
 		//Charmeleon
@@ -107,6 +107,7 @@ public class Pokedex
 		p5.setWeight(19.0);
 		p5.addToTypeList("Fire");
 		p5.addToTypeList(null);
+		p5.setSpritePic("resources/5.png");
 		addToDexList(p5);
 		
 		//Charizard
@@ -117,6 +118,7 @@ public class Pokedex
 		p6.setWeight(90.5);
 		p6.addToTypeList("Fire");
 		p6.addToTypeList(null);
+		p6.setSpritePic("resources/6.png");
 		addToDexList(p6);
 		
 		//CharEvoFam
@@ -138,6 +140,7 @@ public class Pokedex
 		p7.setWeight(9.0);
 		p7.addToTypeList("Water");
 		p7.addToTypeList(null);
+		p7.setSpritePic("resources/7.png");
 		addToDexList(p7);
 		
 		//Wartortle
@@ -148,6 +151,7 @@ public class Pokedex
 		p8.setWeight(22.5);
 		p8.addToTypeList("Water");
 		p8.addToTypeList(null);
+		p8.setSpritePic("resources/8.png");
 		addToDexList(p8);
 		
 		//Blastoise
@@ -158,6 +162,7 @@ public class Pokedex
 		p9.setWeight(85.5);
 		p9.addToTypeList("Water");
 		p9.addToTypeList(null);
+		p9.setSpritePic("resources/9.png");
 		addToDexList(p9);
 		
 		//SquirEvoFam
@@ -179,6 +184,7 @@ public class Pokedex
 		p10.setWeight(2.9);
 		p10.addToTypeList("Bug");
 		p10.addToTypeList(null);
+		p10.setSpritePic("resources/10.png");
 		addToDexList(p10);
 		
 		//Metapod
@@ -189,6 +195,7 @@ public class Pokedex
 		p11.setWeight(9.9);
 		p11.addToTypeList("Bug");
 		p11.addToTypeList(null);
+		p11.setSpritePic("resources/11.png");
 		addToDexList(p11);
 		
 		
@@ -200,6 +207,7 @@ public class Pokedex
 		p12.setWeight(32.0);
 		p12.addToTypeList("Bug");
 		p12.addToTypeList("Flying");
+		p12.setSpritePic("resources/12.png");
 		addToDexList(p12);
 		
 		//CaterEvoFam
@@ -221,6 +229,7 @@ public class Pokedex
 		p13.setWeight(3.2);
 		p13.addToTypeList("Bug");
 		p13.addToTypeList("Poison");
+		p13.setSpritePic("resources/13.png");
 		addToDexList(p13);
 		
 		//Kakuna
@@ -231,6 +240,7 @@ public class Pokedex
 		p14.setWeight(10.0);
 		p14.addToTypeList("Bug");
 		p14.addToTypeList("Poison");
+		p14.setSpritePic("resources/14.png");
 		addToDexList(p14);
 		
 		//Beedrill
@@ -241,6 +251,7 @@ public class Pokedex
 		p15.setWeight(29.5);
 		p15.addToTypeList("Bug");
 		p15.addToTypeList("Poison");
+		p15.setSpritePic("resources/15.png");
 		addToDexList(p15);
 		
 		//WeedEvoFam
@@ -262,6 +273,7 @@ public class Pokedex
 		p16.setWeight(1.8);
 		p16.addToTypeList("Normal");
 		p16.addToTypeList("Flying");
+		p16.setSpritePic("resources/16.png");
 		addToDexList(p16);
 		
 		//Pidgeotto
@@ -272,6 +284,7 @@ public class Pokedex
 		p17.setWeight(30.0);
 		p17.addToTypeList("Normal");
 		p17.addToTypeList("Flying");
+		p17.setSpritePic("resources/17.png");
 		addToDexList(p17);
 		
 		//Pidgeot
@@ -282,6 +295,7 @@ public class Pokedex
 		p18.setWeight(39.5);
 		p18.addToTypeList("Normal");
 		p18.addToTypeList("Flying");
+		p18.setSpritePic("resources/18.png");
 		addToDexList(p18);
 		
 		//PidgEvoFam
@@ -303,6 +317,7 @@ public class Pokedex
 		p19.setWeight(3.5);
 		p19.addToTypeList("Normal");
 		p19.addToTypeList(null);
+		p19.setSpritePic("resources/19.png");
 		addToDexList(p19);
 		
 		//Raticate
@@ -313,6 +328,7 @@ public class Pokedex
 		p20.setWeight(18.5);
 		p20.addToTypeList("Normal");
 		p20.addToTypeList(null);
+		p20.setSpritePic("resources/20.png");
 		addToDexList(p20);
 		
 		//RatEvoFam
@@ -329,6 +345,7 @@ public class Pokedex
 		p21.setWeight(2.0);
 		p21.addToTypeList("Normal");
 		p21.addToTypeList("Flying");
+		p21.setSpritePic("resources/21.png");
 		addToDexList(p21);
 		
 		//Fearow
@@ -339,6 +356,7 @@ public class Pokedex
 		p22.setWeight(38.0);
 		p22.addToTypeList("Normal");
 		p22.addToTypeList("Flying");
+		p22.setSpritePic("resources/22.png");
 		addToDexList(p22);
 		
 		//SpearEvoFam
@@ -355,6 +373,7 @@ public class Pokedex
 		p23.setWeight(6.9);
 		p23.addToTypeList("Poison");
 		p23.addToTypeList(null);
+		p23.setSpritePic("resources/23.png");
 		addToDexList(p23);
 		
 		//Arbok
@@ -365,6 +384,7 @@ public class Pokedex
 		p24.setWeight(65.0);
 		p24.addToTypeList("Poison");
 		p24.addToTypeList(null);
+		p24.setSpritePic("resources/24.png");
 		addToDexList(p24);
 		
 		//EkansEvoFam
@@ -381,6 +401,7 @@ public class Pokedex
 		p25.setWeight(6.0);
 		p25.addToTypeList("Electric");
 		p25.addToTypeList(null);
+		p25.setSpritePic("resources/25.png");
 		addToDexList(p25);
 		
 		//Raichu
@@ -391,6 +412,7 @@ public class Pokedex
 		p26.setWeight(30.0);
 		p26.addToTypeList("Electric");
 		p26.addToTypeList(null);
+		p26.setSpritePic("resources/26.png");
 		addToDexList(p26);
 		
 		//PikaEvoFam
@@ -407,6 +429,7 @@ public class Pokedex
 		p27.setWeight(12.0);
 		p27.addToTypeList("Ground");
 		p27.addToTypeList(null);
+		p27.setSpritePic("resources/27.png");
 		addToDexList(p27);
 		
 		//Sandslash
@@ -417,6 +440,7 @@ public class Pokedex
 		p28.setWeight(29.5);
 		p28.addToTypeList("Ground");
 		p28.addToTypeList(null);
+		p28.setSpritePic("resources/28.png");
 		addToDexList(p28);
 		
 		//SandslashEvoFam
@@ -434,6 +458,7 @@ public class Pokedex
 		p29.addToTypeList("Poison");
 		p29.addToTypeList(null);
 		p29.setGender("Female");
+		p29.setSpritePic("resources/29.png");
 		addToDexList(p29);
 		
 		//Nidorina
@@ -445,6 +470,7 @@ public class Pokedex
 		p30.addToTypeList("Poison");
 		p30.addToTypeList(null);
 		p30.setGender("Female");
+		p30.setSpritePic("resources/30.png");
 		addToDexList(p30);
 		
 		//Nidoqueen
@@ -456,6 +482,7 @@ public class Pokedex
 		p31.addToTypeList("Poison");
 		p31.addToTypeList("Ground");
 		p31.setGender("Female");
+		p31.setSpritePic("resources/31.png");
 		addToDexList(p31);
 		
 		//NidorinaEvoFam
@@ -478,6 +505,7 @@ public class Pokedex
 		p32.addToTypeList("Poison");
 		p32.addToTypeList(null);
 		p32.setGender("Male");
+		p32.setSpritePic("resources/32.png");
 		addToDexList(p32);
 		
 		//Nidorino
@@ -489,6 +517,7 @@ public class Pokedex
 		p33.addToTypeList("Poison");
 		p33.addToTypeList(null);
 		p33.setGender("Male");
+		p33.setSpritePic("resources/33.png");
 		addToDexList(p33);
 		
 		//Nidoking
@@ -500,6 +529,7 @@ public class Pokedex
 		p34.addToTypeList("Poison");
 		p34.addToTypeList("Ground");
 		p34.setGender("Male");
+		p34.setSpritePic("resources/34.png");
 		addToDexList(p34);
 		
 		//NidoinoEvoFam
@@ -521,6 +551,7 @@ public class Pokedex
 		p35.setWeight(7.5);
 		p35.addToTypeList("Fairy");
 		p35.addToTypeList(null);
+		p35.setSpritePic("resources/35.png");
 		addToDexList(p35);
 		
 		//Clefable
@@ -531,6 +562,7 @@ public class Pokedex
 		p36.setWeight(40.0);
 		p36.addToTypeList("Fairy");
 		p36.addToTypeList(null);
+		p36.setSpritePic("resources/36.png");
 		addToDexList(p36);
 		
 		//ClefairyEvoFam
@@ -547,6 +579,7 @@ public class Pokedex
 		p37.setWeight(9.9);
 		p37.addToTypeList("Fire");
 		p37.addToTypeList(null);
+		p37.setSpritePic("resources/37.png");
 		addToDexList(p37);
 		
 		//Ninetails
@@ -557,6 +590,7 @@ public class Pokedex
 		p38.setWeight(19.9);
 		p38.addToTypeList("Fire");
 		p38.addToTypeList(null);
+		p38.setSpritePic("resources/38.png");
 		addToDexList(p38);
 		
 		//VulpixEvoFam
@@ -573,6 +607,7 @@ public class Pokedex
 		p39.setWeight(5.5);
 		p39.addToTypeList("Normal");
 		p39.addToTypeList("Fairy");
+		p39.setSpritePic("resources/39.png");
 		addToDexList(p39);
 		
 		//Wigglytuff
@@ -583,6 +618,7 @@ public class Pokedex
 		p40.setWeight(12.0);
 		p40.addToTypeList("Normal");
 		p40.addToTypeList("Fairy");
+		p40.setSpritePic("resources/40.png");
 		addToDexList(p40);
 		
 		//JigglyEvoFam
@@ -599,6 +635,7 @@ public class Pokedex
 		p41.setWeight(7.5);
 		p41.addToTypeList("Poison");
 		p41.addToTypeList("Flying");
+		p41.setSpritePic("resources/41.png");
 		addToDexList(p41);
 		
 		//Golbat
@@ -609,6 +646,7 @@ public class Pokedex
 		p42.setWeight(55.0);
 		p42.addToTypeList("Poison");
 		p42.addToTypeList("Flying");
+		p42.setSpritePic("resources/42.png");
 		addToDexList(p42);
 		
 		//ZubatEvoFam
@@ -625,6 +663,7 @@ public class Pokedex
 		p43.setWeight(5.4);
 		p43.addToTypeList("Grass");
 		p43.addToTypeList("Poison");
+		p43.setSpritePic("resources/43.png");
 		addToDexList(p43);
 		
 		//Gloom
@@ -635,6 +674,7 @@ public class Pokedex
 		p44.setWeight(8.6);
 		p44.addToTypeList("Grass");
 		p44.addToTypeList("Poison");
+		p44.setSpritePic("resources/44.png");
 		addToDexList(p44);
 		
 		//Vileplume
@@ -645,6 +685,7 @@ public class Pokedex
 		p45.setWeight(18.6);
 		p45.addToTypeList("Grass");
 		p45.addToTypeList("Poison");
+		p45.setSpritePic("resources/45.png");
 		addToDexList(p45);
 		
 		//OddishEvoFam
@@ -668,6 +709,7 @@ public class Pokedex
 		p46.setWeight(5.4);
 		p46.addToTypeList("Bug");
 		p46.addToTypeList("Grass");
+		p46.setSpritePic("resources/46.png");
 		addToDexList(p46);
 		
 		//Parasect
@@ -679,6 +721,7 @@ public class Pokedex
 		p47.setWeight(29.5);
 		p47.addToTypeList("Bug");
 		p47.addToTypeList("Grass");
+		p47.setSpritePic("resources/47.png");
 		addToDexList(p47);
 		
 		//ParasEvoFam
@@ -697,6 +740,7 @@ public class Pokedex
 		p48.setWeight(30.0);
 		p48.addToTypeList("Bug");
 		p48.addToTypeList("Poison");
+		p48.setSpritePic("resources/48.png");
 		addToDexList(p48);
 		
 		//Venomoth
@@ -708,6 +752,7 @@ public class Pokedex
 		p49.setWeight(12.5);
 		p49.addToTypeList("Bug");
 		p49.addToTypeList("Poison");
+		p49.setSpritePic("resources/49.png");
 		addToDexList(p49);
 		
 		//VenoEvoFam
@@ -726,6 +771,7 @@ public class Pokedex
 		p50.setWeight(0.8);
 		p50.addToTypeList("Ground");
 		p50.addToTypeList(null);
+		p50.setSpritePic("resources/50.png");
 		addToDexList(p50);
 		
 		//Dugtrio
@@ -736,7 +782,8 @@ public class Pokedex
 		p51.setHeight(0.7);
 		p51.setWeight(33.3);
 		p51.addToTypeList("Ground");
-		p51.addToEvoFamily(null);
+		p51.addToTypeList(null);
+		p51.setSpritePic("resources/51.png");
 		addToDexList(p51);
 		
 		//DugEvoFam
@@ -746,7 +793,266 @@ public class Pokedex
 		p51.addToEvoFamily(p50);
 		p51.addToEvoFamily(p51);
 		
+		//Meowth
 		
+		Pokemon p52 = new Pokemon("Meowth");
+		p52.setPokeNum(52);
+		p52.setGeneration(1);
+		p52.setHeight(0.4);
+		p52.setWeight(4.2);
+		p52.addToTypeList("Normal");
+		p52.setSpritePic("resources/52.png");
+		p52.addToTypeList(null);
+		addToDexList(p52);
+		
+		//Persian
+		
+		Pokemon p53 = new Pokemon("Persian");
+		p53.setPokeNum(53);
+		p53.setGeneration(1);
+		p53.setHeight(1.0);
+		p53.setWeight(32.0);
+		p53.addToTypeList("Normal");
+		p53.setSpritePic("resources/53.png");
+		p53.addToTypeList(null);
+		addToDexList(p53);
+		
+		//MeoEvoFam
+		
+		p52.addToEvoFamily(p52);
+		p52.addToEvoFamily(p53);
+		p53.addToEvoFamily(p52);
+		p53.addToEvoFamily(p53);
+		
+		//Psyduck
+		
+		Pokemon p54 = new Pokemon("Psyduck");
+		p54.setPokeNum(54);
+		p54.setGeneration(1);
+		p54.setHeight(0.8);
+		p54.setWeight(19.6);
+		p54.addToTypeList("Water");
+		p54.addToTypeList(null);
+		p54.setSpritePic("resources/54.png");
+		addToDexList(p54);
+		
+		//Golduck
+		
+		Pokemon p55 = new Pokemon("Golduck");
+		p55.setPokeNum(55);
+		p55.setGeneration(1);
+		p55.setHeight(1.7);
+		p55.setWeight(76.6);
+		p55.addToTypeList("Water");
+		p55.addToTypeList(null);
+		p55.setSpritePic("resources/55.png");
+		addToDexList(p55);
+		
+		//PsyEvoFam
+		
+		p54.addToEvoFamily(p54);
+		p54.addToEvoFamily(p55);
+		p55.addToEvoFamily(p54);
+		p55.addToEvoFamily(p55);
+		
+		//Mankey
+		
+		Pokemon p56 = new Pokemon("Mankey");
+		p56.setPokeNum(56);
+		p56.setGeneration(1);
+		p56.setHeight(0.5);
+		p56.setWeight(28.0);
+		p56.addToTypeList("Fighting");
+		p56.addToTypeList(null);
+		p56.setSpritePic("resources/56.png");
+		addToDexList(p56);
+		
+		//Primeape
+		
+		Pokemon p57 = new Pokemon("Primeape");
+		p57.setPokeNum(57);
+		p57.setGeneration(1);
+		p57.setHeight(1.0);
+		p57.setWeight(32.0);
+		p57.addToTypeList("Fighting");
+		p57.addToTypeList(null);
+		p57.setSpritePic("resources/57.png");
+		addToDexList(p57);
+		
+		//MankEvoFam
+		
+		p56.addToEvoFamily(p56);
+		p56.addToEvoFamily(p57);
+		p57.addToEvoFamily(p56);
+		p57.addToEvoFamily(p57);
+		
+		//Growlithe
+		
+		Pokemon p58 = new Pokemon("Growlithe");
+		p58.setPokeNum(58);
+		p58.setGeneration(1);
+		p58.setHeight(0.7);
+		p58.setWeight(19.0);
+		p58.addToTypeList("Fire");
+		p58.addToTypeList(null);
+		p58.setSpritePic("resources/58.png");
+		addToDexList(p58);
+		
+		//Arcanine
+		
+		Pokemon p59 = new Pokemon("Arcanine");
+		p59.setPokeNum(59);
+		p59.setGeneration(1);
+		p59.setHeight(1.9);
+		p59.setWeight(155.0);
+		p59.addToTypeList("Fire");
+		p59.addToTypeList(null);
+		p59.setSpritePic("resources/59.png");
+		addToDexList(p59);
+		
+		//Poliwag
+		
+		Pokemon p60 = new Pokemon("Poliwag");
+		p60.setPokeNum(60);
+		p60.setGeneration(1);
+		p60.setHeight(0.6);
+		p60.setWeight(12.4);
+		p60.addToTypeList("Water");
+		p60.addToTypeList(null);
+		p60.setSpritePic("resources/60.png");
+		addToDexList(p60);
+		
+		//Poliwhirl
+		
+		Pokemon p61 = new Pokemon("Poliwhirl");
+		p61.setPokeNum(61);
+		p61.setGeneration(1);
+		p61.setHeight(1.0);
+		p61.setWeight(20.0);
+		p61.addToTypeList("Water");
+		p61.addToTypeList(null);
+		p61.setSpritePic("resources/61.png");
+		addToDexList(p61);
+		
+		//Poliwrath
+		
+		Pokemon p62 = new Pokemon("Poliwrath");
+		p62.setPokeNum(62);
+		p62.setGeneration(1);
+		p62.setHeight(1.3);
+		p62.setWeight(54.0);
+		p62.addToTypeList("Water");
+		p62.addToTypeList(null);
+		p62.setSpritePic("resources/62.png");
+		addToDexList(p62);
+		
+		//PoliEvoFam
+		
+		p60.addToEvoFamily(p60);
+		p60.addToEvoFamily(p61);
+		p60.addToEvoFamily(p62);
+		p61.addToEvoFamily(p60);
+		p61.addToEvoFamily(p61);
+		p61.addToEvoFamily(p62);
+		p62.addToEvoFamily(p60);
+		p62.addToEvoFamily(p61);
+		p62.addToEvoFamily(p62);
+		
+		//Abra
+		
+		Pokemon p63 = new Pokemon("Abra");
+		p63.setPokeNum(63);
+		p63.setGeneration(1);
+		p63.setHeight(0.9);
+		p63.setWeight(19.5);
+		p63.addToTypeList("Psychic");
+		p63.addToTypeList(null);
+		p63.setSpritePic("resources/63.png");
+		addToDexList(p63);
+		
+		//Kadabra
+		
+		Pokemon p64 = new Pokemon("Kadabra");
+		p64.setPokeNum(64);
+		p64.setGeneration(1);
+		p64.setHeight(1.3);
+		p64.setWeight(56.5);
+		p64.addToTypeList("Psychic");
+		p64.addToTypeList(null);
+		p64.setSpritePic("resources/64.png");
+		addToDexList(p64);
+		
+		//Alakazam
+		
+		Pokemon p65 = new Pokemon("Alakazam");
+		p65.setPokeNum(65);
+		p65.setGeneration(1);
+		p65.setHeight(1.5);
+		p65.setWeight(48.0);
+		p65.addToTypeList("Psychic");
+		p65.addToTypeList(null);
+		p65.setSpritePic("resources/65.png");
+		addToDexList(p65);
+		
+		//AbraEvoFam
+		
+		p63.addToEvoFamily(p63);
+		p63.addToEvoFamily(p64);
+		p63.addToEvoFamily(p65);
+		p64.addToEvoFamily(p63);
+		p64.addToEvoFamily(p64);
+		p64.addToEvoFamily(p65);
+		p65.addToEvoFamily(p63);
+		p65.addToEvoFamily(p64);
+		p65.addToEvoFamily(p65);
+		
+		//Machop
+		
+		Pokemon p66 = new Pokemon("Machop");
+		p66.setPokeNum(66);
+		p66.setGeneration(1);
+		p66.setHeight(0.8);
+		p66.setWeight(19.5);
+		p66.addToTypeList("Fighting");
+		p66.addToTypeList(null);
+		p66.setSpritePic("resources/66.png");
+		addToDexList(p66);
+		
+		//Machoke
+		
+		Pokemon p67 = new Pokemon("Machoke");
+		p67.setPokeNum(67);
+		p67.setGeneration(1);
+		p67.setHeight(1.5);
+		p67.setWeight(70.5);
+		p67.addToTypeList("Fighting");
+		p67.addToTypeList(null);
+		p67.setSpritePic("resources/67.png");
+		addToDexList(p67);
+		
+		//Machamp
+		
+		Pokemon p68 = new Pokemon("Machamp");
+		p68.setPokeNum(68);
+		p68.setGeneration(1);
+		p68.setHeight(1.6);
+		p68.setWeight(130.0);
+		p68.addToTypeList("Fighting");
+		p68.addToTypeList(null);
+		p68.setSpritePic("resources/68.png");
+		addToDexList(p68);
+		
+		//MachEvoFam
+		
+		p66.addToEvoFamily(p66);
+		p66.addToEvoFamily(p67);
+		p66.addToEvoFamily(p68);
+		p67.addToEvoFamily(p66);
+		p67.addToEvoFamily(p67);
+		p67.addToEvoFamily(p68);
+		p68.addToEvoFamily(p66);
+		p68.addToEvoFamily(p67);
+		p68.addToEvoFamily(p68);
 		
 		
 		
@@ -767,6 +1073,7 @@ public class Pokedex
 		p144.setWeight(55.4);
 		p144.addToTypeList("Ice");
 		p144.addToTypeList("Flying");
+		p144.setSpritePic("resources/144.png");
 		addToDexList(p144);
 		
 		//Zapdos
@@ -778,6 +1085,7 @@ public class Pokedex
 		p145.setWeight(52.6);
 		p145.addToTypeList("Electric");
 		p145.addToTypeList("Flying");
+		p145.setSpritePic("resources/145.png");
 		addToDexList(p145);
 		
 		//Moltres
@@ -789,6 +1097,7 @@ public class Pokedex
 		p146.setWeight(60.0);
 		p146.addToTypeList("Fire");
 		p146.addToTypeList("Flying");
+		p146.setSpritePic("resources/146.png");
 		addToDexList(p146);
 		
 		//Dratini-Dragonite goes here TEST2
@@ -802,6 +1111,7 @@ public class Pokedex
 		p150.setWeight(122.0);
 		p150.addToTypeList("Psychic");
 		p150.addToTypeList(null);
+		p150.setSpritePic("resources/150.png");
 		addToDexList(p150);
 		
 		//Mew
@@ -813,6 +1123,7 @@ public class Pokedex
 		p151.setWeight(4.0);
 		p151.addToTypeList("Psychic");
 		p151.addToTypeList(null);
+		p151.setSpritePic("resources/151.png");
 		addToDexList(p151);
 		
 	}
