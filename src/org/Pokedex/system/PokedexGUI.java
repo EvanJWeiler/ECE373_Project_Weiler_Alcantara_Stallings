@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class PokedexGUI extends JFrame {
 	private Pokedex p1;
 	private Pokemon currPokemon;
-	
+	private JLabel imgLabel;
 	
 	public PokedexGUI(Pokedex pd1) {
 		super("Pokemon Go Companion");
@@ -78,11 +78,11 @@ public class PokedexGUI extends JFrame {
 			}
 		});
 		
-		//FIXME: make image update when button clicked
 		currPokemon = p1.getDexList().get(0);
-		JLabel imgLabel = new JLabel();
+		imgLabel = new JLabel();
 		try {
 			imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+			repaint();
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -98,7 +98,7 @@ public class PokedexGUI extends JFrame {
 			buttons.add(pokeButton);
 		}
 		
-		setButtonActions(buttons);
+		setButtonActions(buttons, imgLabel);
 		
 		picPanel.add(imgLabel);
 		picPanel.add(info);
@@ -113,6 +113,7 @@ public class PokedexGUI extends JFrame {
 		structure.add(bottomPanel);
 		add(structure);
 		pack();
+		
 		
 	}
 	
@@ -172,13 +173,13 @@ public class PokedexGUI extends JFrame {
 		JLabel name = new JLabel("Name: " + pn1.getName());
 		JLabel height = new JLabel("Height: " + pn1.getHeight() + " m");
 		JLabel weight = new JLabel("Weight: " + pn1.getWeight() + " kg");
-		StringBuilder moveset = new StringBuilder();
+		/*StringBuilder moveset = new StringBuilder();
 		for (int i = 0; i < pn1.getMoveset().size(); ++i) {
 			types.append(pn1.getMoveset().get(i));
 			if (pn1.getMoveset().size() > 1 && i != 1)
 				types.append("/");
 		}
-		JLabel movesetLabel = new JLabel(moveset.toString());
+		JLabel movesetLabel = new JLabel(moveset.toString());*/
 		JLabel gender = new JLabel("Gender: " + pn1.getGender());
 		pokeInfo.add(num);
 		pokeInfo.add(name);
@@ -291,14 +292,9 @@ public class PokedexGUI extends JFrame {
 		generationField.setAlignmentX(LEFT_ALIGNMENT);
 		
 		//setup radio buttons
-		boolean legendarySelect = false;
 		JRadioButton yes = new JRadioButton("Yes");
 		JRadioButton no = new JRadioButton("No", true);
 		ButtonGroup yesOrNo = new ButtonGroup();
-		if (yes.isSelected())
-			legendarySelect = true;
-		else
-			legendarySelect = false;
 		yesOrNo.add(yes);
 		yesOrNo.add(no);
 		
@@ -526,16 +522,20 @@ public class PokedexGUI extends JFrame {
 		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
 		BufferedImage image2 = null;
 		try {
-			image1 = ImageIO.read(getClass().getResourceAsStream(pokemon2.getSpritePic()));
+			image2 = ImageIO.read(getClass().getResourceAsStream(pokemon2.getSpritePic()));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
-		JLabel imgLabel2 = new JLabel(new ImageIcon(image1));
-		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
+		JLabel imgLabel2 = new JLabel(new ImageIcon(image2));
+		imgLabel2.setAlignmentX(CENTER_ALIGNMENT);
 		
 		//FIXME: add recommendation level bar
 		
 		//initialize bottomLeft Labels
+		JLabel pokeNameL = new JLabel("   " + pokemon1.getName());
+		pokeNameL.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel whiteSpaceL = new JLabel("    ");
+		whiteSpaceL.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel numL = new JLabel("Num: " + pokemon1.getPokeNum());
 		numL.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel nameL = new JLabel("Name: " + name1);
@@ -548,6 +548,10 @@ public class PokedexGUI extends JFrame {
 		//ivL.setAlignmentX(LEFT_ALIGNMENT);
 		
 		//initialize bottomRight Labels
+		JLabel pokeNameR = new JLabel("   " + pokemon2.getName());
+		pokeNameR.setAlignmentX(LEFT_ALIGNMENT);
+		JLabel whiteSpaceR = new JLabel("    ");
+		whiteSpaceR.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel numR = new JLabel("Num: " + pokemon2.getPokeNum());
 		numR.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel nameR = new JLabel("Name: " + name2);
@@ -576,6 +580,8 @@ public class PokedexGUI extends JFrame {
 		topPanel.add(imgLabel2);
 		
 		//add to bottomLeft
+		bottomLeft.add(pokeNameL);
+		bottomLeft.add(whiteSpaceL);
 		bottomLeft.add(numL);
 		bottomLeft.add(nameL);
 		bottomLeft.add(type1L);
@@ -593,6 +599,8 @@ public class PokedexGUI extends JFrame {
 		//bottomLeft.add(ivL);
 		
 		//add to bottomRight
+		bottomRight.add(pokeNameR);
+		bottomRight.add(whiteSpaceR);
 		bottomRight.add(numR);
 		bottomRight.add(nameR);
 		bottomRight.add(type1R);
@@ -642,13 +650,18 @@ public class PokedexGUI extends JFrame {
 		return searchResult;
 	}
 	
-	public void setButtonActions(ArrayList<JButton> buttons) { //FIXME: add all actionlisteners
+	public void setButtonActions(ArrayList<JButton> buttons, JLabel frame) { //FIXME: add all actionlisteners
 		buttons.get(0).addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(0);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(1).addActionListener(new ActionListener() {
@@ -656,7 +669,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(1);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(2).addActionListener(new ActionListener() {
@@ -664,7 +682,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(2);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(3).addActionListener(new ActionListener() {
@@ -672,7 +695,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(3);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(4).addActionListener(new ActionListener() {
@@ -680,7 +708,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(4);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(5).addActionListener(new ActionListener() {
@@ -688,7 +721,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(5);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(6).addActionListener(new ActionListener() {
@@ -696,7 +734,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(6);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(7).addActionListener(new ActionListener() {
@@ -704,7 +747,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(7);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(8).addActionListener(new ActionListener() {
@@ -712,7 +760,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(8);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(9).addActionListener(new ActionListener() {
@@ -720,7 +773,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(9);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(10).addActionListener(new ActionListener() {
@@ -728,7 +786,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(10);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(11).addActionListener(new ActionListener() {
@@ -736,7 +799,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(11);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(12).addActionListener(new ActionListener() {
@@ -744,7 +812,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(12);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(13).addActionListener(new ActionListener() {
@@ -752,7 +825,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(13);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(14).addActionListener(new ActionListener() {
@@ -760,7 +838,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(14);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(15).addActionListener(new ActionListener() {
@@ -768,7 +851,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(15);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(16).addActionListener(new ActionListener() {
@@ -776,7 +864,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(16);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(17).addActionListener(new ActionListener() {
@@ -784,7 +877,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(17);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(18).addActionListener(new ActionListener() {
@@ -792,7 +890,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(18);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(19).addActionListener(new ActionListener() {
@@ -800,7 +903,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(19);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(20).addActionListener(new ActionListener() {
@@ -808,7 +916,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(20);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(21).addActionListener(new ActionListener() {
@@ -816,7 +929,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(21);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(22).addActionListener(new ActionListener() {
@@ -824,7 +942,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(22);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(23).addActionListener(new ActionListener() {
@@ -832,7 +955,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(23);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(24).addActionListener(new ActionListener() {
@@ -840,7 +968,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(24);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(25).addActionListener(new ActionListener() {
@@ -848,7 +981,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(25);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(26).addActionListener(new ActionListener() {
@@ -856,7 +994,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(26);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(27).addActionListener(new ActionListener() {
@@ -864,7 +1007,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(27);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(28).addActionListener(new ActionListener() {
@@ -872,7 +1020,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(28);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(29).addActionListener(new ActionListener() {
@@ -880,7 +1033,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(29);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(30).addActionListener(new ActionListener() {
@@ -888,7 +1046,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(30);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(31).addActionListener(new ActionListener() {
@@ -896,7 +1059,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(31);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(32).addActionListener(new ActionListener() {
@@ -904,7 +1072,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(32);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(33).addActionListener(new ActionListener() {
@@ -912,7 +1085,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(33);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(34).addActionListener(new ActionListener() {
@@ -920,7 +1098,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(34);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(35).addActionListener(new ActionListener() {
@@ -928,7 +1111,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(35);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(36).addActionListener(new ActionListener() {
@@ -936,7 +1124,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(36);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(37).addActionListener(new ActionListener() {
@@ -944,7 +1137,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(37);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(38).addActionListener(new ActionListener() {
@@ -952,7 +1150,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(38);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(39).addActionListener(new ActionListener() {
@@ -960,7 +1163,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(39);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(40).addActionListener(new ActionListener() {
@@ -968,7 +1176,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(40);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(41).addActionListener(new ActionListener() {
@@ -976,7 +1189,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(41);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(42).addActionListener(new ActionListener() {
@@ -984,7 +1202,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(42);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(43).addActionListener(new ActionListener() {
@@ -992,7 +1215,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(43);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(44).addActionListener(new ActionListener() {
@@ -1000,7 +1228,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(44);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(45).addActionListener(new ActionListener() {
@@ -1008,7 +1241,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(45);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(46).addActionListener(new ActionListener() {
@@ -1016,7 +1254,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(46);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(47).addActionListener(new ActionListener() {
@@ -1024,7 +1267,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(47);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(48).addActionListener(new ActionListener() {
@@ -1032,7 +1280,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(48);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(49).addActionListener(new ActionListener() {
@@ -1040,7 +1293,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(49);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(50).addActionListener(new ActionListener() {
@@ -1048,7 +1306,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(50);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(51).addActionListener(new ActionListener() {
@@ -1056,7 +1319,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(51);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(52).addActionListener(new ActionListener() {
@@ -1064,7 +1332,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(52);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(53).addActionListener(new ActionListener() {
@@ -1072,7 +1345,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(53);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(54).addActionListener(new ActionListener() {
@@ -1080,7 +1358,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(54);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(55).addActionListener(new ActionListener() {
@@ -1088,7 +1371,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(55);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(56).addActionListener(new ActionListener() {
@@ -1096,7 +1384,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(56);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(57).addActionListener(new ActionListener() {
@@ -1104,7 +1397,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(57);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(58).addActionListener(new ActionListener() {
@@ -1112,7 +1410,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(58);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(59).addActionListener(new ActionListener() {
@@ -1120,7 +1423,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(59);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(60).addActionListener(new ActionListener() {
@@ -1128,7 +1436,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(60);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(61).addActionListener(new ActionListener() {
@@ -1136,7 +1449,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(61);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(62).addActionListener(new ActionListener() {
@@ -1144,7 +1462,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(62);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(63).addActionListener(new ActionListener() {
@@ -1152,7 +1475,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(63);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(64).addActionListener(new ActionListener() {
@@ -1160,7 +1488,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(64);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(65).addActionListener(new ActionListener() {
@@ -1168,7 +1501,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(65);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(66).addActionListener(new ActionListener() {
@@ -1176,7 +1514,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(66);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(67).addActionListener(new ActionListener() {
@@ -1184,7 +1527,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(67);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 		buttons.get(68).addActionListener(new ActionListener() {
@@ -1192,7 +1540,12 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				currPokemon = p1.getDexList().get(68);
-				
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
 			}
 		});
 	}
