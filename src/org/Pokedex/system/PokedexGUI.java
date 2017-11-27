@@ -67,7 +67,7 @@ public class PokedexGUI extends JFrame {
 		searchButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				LaunchSearchScreen(); //FIXME: Implement Search
+				LaunchSearchScreen(); 
 			}
 		});
 		JButton matchupButton = new JButton("Matchup");
@@ -75,7 +75,6 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				LaunchMathcupScreen();
-				LaunchMatchupOutputScreen("0", null, null, null, "0.0", "0", null, null, null, "0.0"); //FIXME remove after testing
 			}
 		});
 		
@@ -113,6 +112,7 @@ public class PokedexGUI extends JFrame {
 		structure.add(topPanel);
 		structure.add(bottomPanel);
 		add(structure);
+		pack();
 		
 	}
 	
@@ -128,6 +128,8 @@ public class PokedexGUI extends JFrame {
 		evoLabel.setAlignmentX(CENTER_ALIGNMENT);
 		JPanel evoPics = new JPanel();
 		evoPics.setLayout(new FlowLayout());
+		JPanel evoNames = new JPanel();
+		evoNames.setLayout(new FlowLayout());
 		JButton closeButton = new JButton("Close");
 		closeButton.setAlignmentX(CENTER_ALIGNMENT);
 		JPanel bottomPanel = new JPanel();
@@ -137,6 +139,7 @@ public class PokedexGUI extends JFrame {
 		
 		info.setSize(500, 600);
 		info.setLocation(600, 100);
+		info.setLocationRelativeTo(info);
 		
 		//initialize image
 		BufferedImage image = null;
@@ -182,7 +185,7 @@ public class PokedexGUI extends JFrame {
 		//pokeInfo.add(movesetLabel);
 		pokeInfo.add(gender);
 		
-		//setup EVO Section
+		//setup EVO Pics
 		BufferedImage image1 = null;
 		try {
 			image1 = ImageIO.read(getClass().getResourceAsStream(pn1.getEvoFamily().get(0).getSpritePic()));
@@ -217,6 +220,18 @@ public class PokedexGUI extends JFrame {
 			evoPics.add(imgLabel3);
 		}
 		
+		//setup EVO name
+		JLabel evo1 = new JLabel("       " + pn1.getEvoFamily().get(0).getName() + "       ");
+		evoNames.add(evo1);
+		if (pn1.getEvoFamily().size() > 1) {
+			JLabel evo2 = new JLabel("        " + pn1.getEvoFamily().get(1).getName() + "       ");
+			evoNames.add(evo2);
+		}
+		if (pn1.getEvoFamily().size() > 2) {
+			JLabel evo3 = new JLabel("       " + pn1.getEvoFamily().get(2).getName() + "      ");
+			evoNames.add(evo3);
+		}
+		
 		closeButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -229,6 +244,7 @@ public class PokedexGUI extends JFrame {
 		topPanel.add(pokeInfo);
 		bottomPanel.add(evoLabel);
 		bottomPanel.add(evoPics);
+		bottomPanel.add(evoNames);
 		bottomPanel.add(closeButton);
 		structure.add(topPanel);
 		structure.add(bottomPanel);
@@ -290,12 +306,43 @@ public class PokedexGUI extends JFrame {
 		search.setAlignmentX(CENTER_ALIGNMENT);
 		searchButtonPanel.add(search);
 		searchButtonPanel.setAlignmentX(CENTER_ALIGNMENT);
-		search.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
+		if (legendarySelect == false) { 
+			search.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					if (numField.getText().isEmpty() || nameField.getText().isEmpty() || type1Field.getText().isEmpty() || generationField.getText().isEmpty()) {
+						JOptionPane.showMessageDialog(new JFrame(), "Please fill out required fields. Type 2 can be left blank.", "Information Missing", JOptionPane.WARNING_MESSAGE);
+					}
+					else {
+						ArrayList<Pokemon> searchResult = new ArrayList<Pokemon>();
+						if (type2Field.getText().isEmpty())
+							searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), null, Integer.parseInt(generationField.getText()), false);
+						else
+							searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), type2Field.getText(), Integer.parseInt(generationField.getText()), false);
+						for (int i = 0; i < searchResult.size(); ++i) {
+							LaunchInfoScreen(searchResult.get(i));
+						}
+					}
+				}
+			});
+		}
+		else if (legendarySelect == true) {
+			search.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					if (numField.getText().isEmpty() || nameField.getText().isEmpty() || type1Field.getText().isEmpty() || generationField.getText().isEmpty()) {
+						JOptionPane.showMessageDialog(new JFrame(), "Please fill out required fields. Type 2 can be left blank.", "Information Missing", JOptionPane.WARNING_MESSAGE);
+					}
+					else {
+						if (type2Field.getText().isEmpty())
+							p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), null, Integer.parseInt(generationField.getText()), true);
+						else
+							p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), type2Field.getText(), Integer.parseInt(generationField.getText()), true);
+					}
+				}
+			});
+		}
+			
 		
 		//add to fieldsPanel
 		fieldsPanel.add(num);
@@ -366,23 +413,14 @@ public class PokedexGUI extends JFrame {
 		numL.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel nameL = new JLabel("Name:");
 		nameL.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel type1L = new JLabel("Type1:");
-		type1L.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel type2L = new JLabel("Type2:");
-		type2L.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel cpL = new JLabel("CP:");
 		cpL.setAlignmentX(LEFT_ALIGNMENT);
 		
 		//initialize bottomLeft Fields
 		JTextField numFieldL = new JTextField();
 		numFieldL.setAlignmentX(LEFT_ALIGNMENT);
-		numFieldL.setMinimumSize(new Dimension(100, 5));
 		JTextField nameFieldL = new JTextField();
 		nameFieldL.setAlignmentX(LEFT_ALIGNMENT);
-		JTextField type1FieldL = new JTextField();
-		type1FieldL.setAlignmentX(LEFT_ALIGNMENT);
-		JTextField type2FieldL = new JTextField();
-		type2FieldL.setAlignmentX(LEFT_ALIGNMENT);
 		JTextField cpFieldL = new JTextField();
 		cpFieldL.setAlignmentX(LEFT_ALIGNMENT);
 		
@@ -391,10 +429,6 @@ public class PokedexGUI extends JFrame {
 		numR.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel nameR = new JLabel("Name:");
 		nameR.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel type1R = new JLabel("Type1:");
-		type1R.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel type2R = new JLabel("Type2:");
-		type2R.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel cpR = new JLabel("CP:");
 		cpR.setAlignmentX(LEFT_ALIGNMENT);
 		
@@ -403,10 +437,6 @@ public class PokedexGUI extends JFrame {
 		numFieldR.setAlignmentX(LEFT_ALIGNMENT);
 		JTextField nameFieldR = new JTextField();
 		nameFieldR.setAlignmentX(LEFT_ALIGNMENT);
-		JTextField type1FieldR = new JTextField();
-		type1FieldR.setAlignmentX(LEFT_ALIGNMENT);
-		JTextField type2FieldR = new JTextField();
-		type2FieldR.setAlignmentX(LEFT_ALIGNMENT);
 		JTextField cpFieldR = new JTextField();
 		cpFieldR.setAlignmentX(LEFT_ALIGNMENT);
 		
@@ -416,18 +446,12 @@ public class PokedexGUI extends JFrame {
 		okButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (numFieldL.getText().isEmpty() || nameFieldL.getText().isEmpty() || type1FieldL.getText().isEmpty() || cpFieldL.getText().isEmpty() || numFieldR.getText().isEmpty() || nameFieldR.getText().isEmpty() || type1FieldR.getText().isEmpty() || cpFieldR.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(new JFrame(), "Please fill out required fields", "Information Missing", JOptionPane.WARNING_MESSAGE);
+				if (numFieldL.getText().isEmpty() || nameFieldL.getText().isEmpty() || cpFieldL.getText().isEmpty() || numFieldR.getText().isEmpty() || nameFieldR.getText().isEmpty() || cpFieldR.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(new JFrame(), "Please fill out fields", "Information Missing", JOptionPane.WARNING_MESSAGE);
 				}
 				else {
-					if (type2FieldL.getText().isEmpty() && type2FieldR.getText().isEmpty())
-						LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), type1FieldL.getText(), "N/A", cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), type1FieldR.getText(), "N/A", cpFieldR.getText());
-					else if (type2FieldL.getText().isEmpty())
-						LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), type1FieldL.getText(), "N/A", cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), type1FieldR.getText(), type2FieldR.getText(), cpFieldR.getText());
-					else if (type2FieldR.getText().isEmpty())
-						LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), type1FieldL.getText(), type2FieldL.getText(), cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), type1FieldR.getText(), "N/A", cpFieldR.getText());
-					else
-						LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), type1FieldL.getText(), type2FieldL.getText(), cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), type1FieldR.getText(), type2FieldR.getText(), cpFieldR.getText());
+					LaunchMatchupOutputScreen(numFieldL.getText(), nameFieldL.getText(), cpFieldL.getText(), numFieldR.getText(), nameFieldR.getText(), cpFieldR.getText());
+					frame.dispose();
 				}
 			}
 		});
@@ -448,10 +472,6 @@ public class PokedexGUI extends JFrame {
 		bottomLeft.add(numFieldL);
 		bottomLeft.add(nameL);
 		bottomLeft.add(nameFieldL);
-		bottomLeft.add(type1L);
-		bottomLeft.add(type1FieldL);
-		bottomLeft.add(type2L);
-		bottomLeft.add(type2FieldL);
 		bottomLeft.add(cpL);
 		bottomLeft.add(cpFieldL);
 		
@@ -460,10 +480,6 @@ public class PokedexGUI extends JFrame {
 		bottomRight.add(numFieldR);
 		bottomRight.add(nameR);
 		bottomRight.add(nameFieldR);
-		bottomRight.add(type1R);
-		bottomRight.add(type1FieldR);
-		bottomRight.add(type2R);
-		bottomRight.add(type2FieldR);
 		bottomRight.add(cpR);
 		bottomRight.add(cpFieldR);
 		
@@ -490,7 +506,7 @@ public class PokedexGUI extends JFrame {
 		
 	}
 	
-	public void LaunchMatchupOutputScreen(String num1, String name1, String type11, String type12, String cp1, String num2, String name2, String type21, String type22, String cp2) {
+	public void LaunchMatchupOutputScreen(String num1, String name1, String cp1, String num2, String name2, String cp2) {
 		JFrame frame = new JFrame("Matchup Output");
 		JPanel structure = new JPanel();
 		JPanel topPanel = new JPanel();
@@ -499,10 +515,8 @@ public class PokedexGUI extends JFrame {
 		JPanel bottomRight = new JPanel();
 		JPanel buttonPanel = new JPanel();
 		
-		//calculate IVs
-		//FIXME add declaration for IV calc function
-		double iv1 = 0.0; //FIXME: change to result of IV calculation
-		double iv2 = 0.0; //FIXME: change to result of IV calculation
+		Pokemon pokemon1 = findPokemon(Integer.parseInt(num1), name1);
+		Pokemon pokemon2 = findPokemon(Integer.parseInt(num2), name2);
 		
 		//set Layouts
 		topPanel.setLayout(new FlowLayout());
@@ -514,10 +528,9 @@ public class PokedexGUI extends JFrame {
 		
 		//initialize components of topPanel
 		JLabel vs = new JLabel("VS");
-		//FIXME: add getPokemonSpritePics
 		BufferedImage image1 = null;
 		try {
-			image1 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
+			image1 = ImageIO.read(getClass().getResourceAsStream(pokemon1.getSpritePic()));
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -525,42 +538,39 @@ public class PokedexGUI extends JFrame {
 		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
 		BufferedImage image2 = null;
 		try {
-			image2 = ImageIO.read(getClass().getResourceAsStream("resources/white128.png"));
+			image1 = ImageIO.read(getClass().getResourceAsStream(pokemon2.getSpritePic()));
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		JLabel imgLabel2 = new JLabel(new ImageIcon(image2));
-		imgLabel2.setAlignmentX(CENTER_ALIGNMENT);
+		} 
+		JLabel imgLabel2 = new JLabel(new ImageIcon(image1));
+		imgLabel1.setAlignmentX(CENTER_ALIGNMENT);
 		
 		//FIXME: add recommendation level bar
 		
 		//initialize bottomLeft Labels
-		JLabel numL = new JLabel("Num: " + num1);
+		JLabel numL = new JLabel("Num: " + pokemon1.getPokeNum());
 		numL.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel nameL = new JLabel("Name: " + name1);
 		nameL.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel type1L = new JLabel("Type1: " + type11);
+		JLabel type1L = new JLabel("Type 1: " + pokemon1.getTypeList().get(0));
 		type1L.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel type2L = new JLabel("Type2: " + type12);
-		type2L.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel cpL = new JLabel("CP: " + cp1);
 		cpL.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel ivL = new JLabel("IV: " + iv1);
-		ivL.setAlignmentX(LEFT_ALIGNMENT);
+		//JLabel ivL = new JLabel("IV: " + iv1);
+		//ivL.setAlignmentX(LEFT_ALIGNMENT);
 		
 		//initialize bottomRight Labels
-		JLabel numR = new JLabel("Num: " + num2);
+		JLabel numR = new JLabel("Num: " + pokemon2.getPokeNum());
 		numR.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel nameR = new JLabel("Name: " + name2);
 		nameR.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel type1R = new JLabel("Type1: " + type21);
+		JLabel type1R = new JLabel("Type1: " + pokemon2.getTypeList().get(0));
 		type1R.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel type2R = new JLabel("Type2: " + type22);
-		type2R.setAlignmentX(LEFT_ALIGNMENT);
+		
 		JLabel cpR = new JLabel("CP: " + cp2);
 		cpR.setAlignmentX(LEFT_ALIGNMENT);
-		JLabel ivR = new JLabel("IV: " + iv2);
-		ivR.setAlignmentX(LEFT_ALIGNMENT);
+		//JLabel ivR = new JLabel("IV: " + iv2);
+		//ivR.setAlignmentX(LEFT_ALIGNMENT);
 		
 		//setup Buttons
 		JButton closeButton = new JButton("Close");
@@ -568,6 +578,7 @@ public class PokedexGUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
+				LaunchMathcupScreen();;
 			}
 		});
 		
@@ -580,17 +591,35 @@ public class PokedexGUI extends JFrame {
 		bottomLeft.add(numL);
 		bottomLeft.add(nameL);
 		bottomLeft.add(type1L);
-		bottomLeft.add(type2L);
+		if (pokemon1.getTypeList().get(1) == null) {
+			JLabel type2L = new JLabel("Type 2: N/A");
+			type2L.setAlignmentX(LEFT_ALIGNMENT);
+			bottomLeft.add(type2L);
+		}
+		else {
+			JLabel type2L = new JLabel("Type 2: " + pokemon1.getTypeList().get(1));
+			type2L.setAlignmentX(LEFT_ALIGNMENT);
+			bottomLeft.add(type2L);
+		}
 		bottomLeft.add(cpL);
-		bottomLeft.add(ivL);
+		//bottomLeft.add(ivL);
 		
 		//add to bottomRight
 		bottomRight.add(numR);
 		bottomRight.add(nameR);
 		bottomRight.add(type1R);
-		bottomRight.add(type2R);
+		if (pokemon2.getTypeList().get(1) == null) {
+			JLabel type2R = new JLabel("Type2: N/A");
+			type2R.setAlignmentX(LEFT_ALIGNMENT);
+			bottomRight.add(type2R);
+		}
+		else {
+			JLabel type2R = new JLabel("Type2: " + pokemon2.getTypeList().get(1));
+			type2R.setAlignmentX(LEFT_ALIGNMENT);
+			bottomRight.add(type2R);
+		}
 		bottomRight.add(cpR);
-		bottomRight.add(ivR);
+		//bottomRight.add(ivR);
 		
 		//add to buttonPanel
 		buttonPanel.add(closeButton);
@@ -613,11 +642,17 @@ public class PokedexGUI extends JFrame {
 		frame.setVisible(true);
 	}
 	
-	/*public ArrayList<Pokemon> searchPokemon(int aNum, String aName, String aType1, String aType2, int aGen, boolean aIsLegendary) {
-		ArrayList<Pokemon> searchResult = new ArrayList<Pokemon>();
-		//FIXME: Implement Search
+	public Pokemon findPokemon(int aNum, String aName) {
+		Pokemon searchResult = null;
+		
+		for (int i = 0; i < p1.getDexList().size(); ++i) {
+			if (p1.getDexList().get(i).getPokeNum() == aNum) {
+				searchResult = p1.getDexList().get(i);
+			}
+		}
+		
 		return searchResult;
-	}*/
+	}
 	
 	public void setButtonActions(ArrayList<JButton> buttons) { //FIXME: add all actionlisteners
 		buttons.get(0).addActionListener(new ActionListener() {
