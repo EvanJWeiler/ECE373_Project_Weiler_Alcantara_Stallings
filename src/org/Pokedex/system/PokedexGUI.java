@@ -154,9 +154,11 @@ public class PokedexGUI extends JFrame {
 		//create string of types
 		StringBuilder types = new StringBuilder();
 		if (pn1.getTypeList().get(1) == null) {
+			types.append("Type: ");
 			types.append(pn1.getTypeList().get(0));
 		}
 		else {
+			types.append("Types: ");
 			types.append(pn1.getTypeList().get(0) + "/" + pn1.getTypeList().get(1));
 		}
 		JLabel typesLabel = new JLabel(types.toString());
@@ -316,9 +318,13 @@ public class PokedexGUI extends JFrame {
 					else {
 						ArrayList<Pokemon> searchResult = new ArrayList<Pokemon>();
 						if (type2Field.getText().isEmpty())
-							searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), null, Integer.parseInt(generationField.getText()), false);
+							searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), null, Integer.parseInt(generationField.getText()), false); 
 						else
 							searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), type2Field.getText(), Integer.parseInt(generationField.getText()), false);
+						
+						if(searchResult.size() == 0)
+							JOptionPane.showMessageDialog(new JFrame(), "Search returned no results", "No Results Found", JOptionPane.WARNING_MESSAGE);
+						
 						for (int i = 0; i < searchResult.size(); ++i) {
 							LaunchInfoScreen(searchResult.get(i));
 						}

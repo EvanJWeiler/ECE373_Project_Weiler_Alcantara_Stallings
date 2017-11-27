@@ -35,7 +35,7 @@ public class Pokedex
 			   dexList.get(i).getGeneration() == aGen &&
 			   dexList.get(i).isLegendary() == aIsLegendary)
 			{
-				tempList.add(dexList.get(i));
+			tempList.add(dexList.get(i));
 			}
 		}
 		
