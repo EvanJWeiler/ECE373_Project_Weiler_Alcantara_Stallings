@@ -308,46 +308,28 @@ public class PokedexGUI extends JFrame {
 		search.setAlignmentX(CENTER_ALIGNMENT);
 		searchButtonPanel.add(search);
 		searchButtonPanel.setAlignmentX(CENTER_ALIGNMENT);
-		if (legendarySelect == false) { 
-			search.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					if (numField.getText().isEmpty() || nameField.getText().isEmpty() || type1Field.getText().isEmpty() || generationField.getText().isEmpty()) {
-						JOptionPane.showMessageDialog(new JFrame(), "Please fill out required fields. Type 2 can be left blank.", "Information Missing", JOptionPane.WARNING_MESSAGE);
-					}
-					else {
-						ArrayList<Pokemon> searchResult = new ArrayList<Pokemon>();
-						if (type2Field.getText().isEmpty())
-							searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), null, Integer.parseInt(generationField.getText()), false); 
-						else
-							searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), type2Field.getText(), Integer.parseInt(generationField.getText()), false);
-						
-						if(searchResult.size() == 0)
-							JOptionPane.showMessageDialog(new JFrame(), "Search returned no results", "No Results Found", JOptionPane.WARNING_MESSAGE);
-						
-						for (int i = 0; i < searchResult.size(); ++i) {
-							LaunchInfoScreen(searchResult.get(i));
-						}
+		search.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (numField.getText().isEmpty() || nameField.getText().isEmpty() || type1Field.getText().isEmpty() || generationField.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(new JFrame(), "Please fill out required fields. Type 2 can be left blank.", "Information Missing", JOptionPane.WARNING_MESSAGE);
+				}
+				else {
+					ArrayList<Pokemon> searchResult = new ArrayList<Pokemon>();
+					if (type2Field.getText().isEmpty())
+						searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), null, Integer.parseInt(generationField.getText()), yes.isSelected()); 
+					else
+						searchResult = p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), type2Field.getText(), Integer.parseInt(generationField.getText()), yes.isSelected());
+					
+					if(searchResult.size() == 0)
+						JOptionPane.showMessageDialog(new JFrame(), "Search returned no results", "No Results Found", JOptionPane.WARNING_MESSAGE);
+					
+					for (int i = 0; i < searchResult.size(); ++i) {
+						LaunchInfoScreen(searchResult.get(i));
 					}
 				}
-			});
-		}
-		else if (legendarySelect == true) {
-			search.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					if (numField.getText().isEmpty() || nameField.getText().isEmpty() || type1Field.getText().isEmpty() || generationField.getText().isEmpty()) {
-						JOptionPane.showMessageDialog(new JFrame(), "Please fill out required fields. Type 2 can be left blank.", "Information Missing", JOptionPane.WARNING_MESSAGE);
-					}
-					else {
-						if (type2Field.getText().isEmpty())
-							p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), null, Integer.parseInt(generationField.getText()), true);
-						else
-							p1.searchPokemon(Integer.parseInt(numField.getText()), nameField.getText(), type1Field.getText(), type2Field.getText(), Integer.parseInt(generationField.getText()), true);
-					}
-				}
-			});
-		}
+			}
+		});
 			
 		
 		//add to fieldsPanel
