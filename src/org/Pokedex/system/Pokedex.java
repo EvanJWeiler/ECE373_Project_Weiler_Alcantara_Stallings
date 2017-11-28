@@ -1054,8 +1054,133 @@ public class Pokedex
 		p68.addToEvoFamily(p67);
 		p68.addToEvoFamily(p68);
 		
+		//Bellsprout
 		
+		Pokemon p69 = new Pokemon("Bellsprout"); //nice
+		p69.setPokeNum(69);
+		p69.setGeneration(1);
+		p69.setHeight(0.7);
+		p69.setWeight(4.0);
+		p69.addToTypeList("Grass");
+		p69.addToTypeList("Poison");
+		p69.setSpritePic("resources/69.png");
+		addToDexList(p69);
 		
+		//Weepinbell
+		
+		Pokemon p70 = new Pokemon("Weepinbell");
+		p70.setPokeNum(70);
+		p70.setGeneration(1);
+		p70.setHeight(1.0);
+		p70.setWeight(6.4);
+		p70.addToTypeList("Grass");
+		p70.addToTypeList("Poison");
+		p70.setSpritePic("resources/70.png");
+		addToDexList(p70);
+		
+		//Victreebel
+		
+		Pokemon p71 = new Pokemon("Victreebel");
+		p71.setPokeNum(71);
+		p71.setGeneration(1);
+		p71.setHeight(1.7);
+		p71.setWeight(15.5);
+		p71.addToTypeList("Grass");
+		p71.addToTypeList("Poison");
+		p71.setSpritePic("resources/71.png");
+		addToDexList(p71);
+		
+		//BellEvoFam
+		
+		p69.addToEvoFamily(p69);
+		p69.addToEvoFamily(p70);
+		p69.addToEvoFamily(p71);
+		p70.addToEvoFamily(p69);
+		p70.addToEvoFamily(p70);
+		p70.addToEvoFamily(p71);
+		p71.addToEvoFamily(p69);
+		p71.addToEvoFamily(p70);
+		p71.addToEvoFamily(p71);
+		
+		//Tentacool
+		
+		Pokemon p72 = new Pokemon("Tentacool");
+		p72.setPokeNum(72);
+		p72.setGeneration(1);
+		p72.setHeight(0.9);
+		p72.setWeight(45.5);
+		p72.addToTypeList("Water");
+		p72.addToTypeList("Poison");
+		p72.setSpritePic("resources/72.png");
+		addToDexList(p72);
+		
+		//Tentacruel
+		
+		Pokemon p73 = new Pokemon("Tentacruel");
+		p73.setPokeNum(73);
+		p73.setGeneration(1);
+		p73.setHeight(1.6);
+		p73.setWeight(55.0);
+		p73.addToTypeList("Water");
+		p73.addToTypeList("Poison");
+		p73.setSpritePic("resources/73.png");
+		addToDexList(p73);
+		
+		//TentEvoFam
+		
+		p72.addToEvoFamily(p72);
+		p72.addToEvoFamily(p73);
+		p73.addToEvoFamily(p72);
+		p73.addToEvoFamily(p73);
+		
+		//Geodude
+		
+		Pokemon p74 = new Pokemon("Geodude");
+		p74.setPokeNum(74);
+		p74.setGeneration(1);
+		p74.setHeight(0.4);
+		p74.setWeight(22.0);
+		p74.addToTypeList("Rock");
+		p74.addToTypeList("Ground");
+		p74.setSpritePic("resources/74.png");
+		addToDexList(p74);
+		
+		//Graveler
+		
+		Pokemon p75 = new Pokemon("Graveler");
+		p75.setPokeNum(75);
+		p75.setGeneration(1);
+		p75.setHeight(1.0);
+		p75.setWeight(105.0);
+		p75.addToTypeList("Rock");
+		p75.addToTypeList("Ground");
+		p75.setSpritePic("resources/75.png");
+		addToDexList(p75);
+		
+		//Golem
+		
+		Pokemon p76 = new Pokemon("Golem");
+		p76.setPokeNum(76);
+		p76.setGeneration(1);
+		p76.setHeight(1.4);
+		p76.setWeight(300.0);
+		p76.addToTypeList("Rock");
+		p76.addToTypeList("Ground");
+		p76.setSpritePic("resources/76.png");
+		addToDexList(p76);
+		
+		//GeoEvoFam
+		
+		p74.addToEvoFamily(p74);
+		p74.addToEvoFamily(p75);
+		p74.addToEvoFamily(p76);
+		p75.addToEvoFamily(p74);
+		p75.addToEvoFamily(p75);
+		p75.addToEvoFamily(p76);
+		p76.addToEvoFamily(p74);
+		p76.addToEvoFamily(p75);
+		p76.addToEvoFamily(p76);
+				
 		
 		
 		
@@ -1074,6 +1199,7 @@ public class Pokedex
 		p144.addToTypeList("Ice");
 		p144.addToTypeList("Flying");
 		p144.setSpritePic("resources/144.png");
+		p144.addToEvoFamily(p144);
 		addToDexList(p144);
 		
 		//Zapdos
@@ -1086,6 +1212,7 @@ public class Pokedex
 		p145.addToTypeList("Electric");
 		p145.addToTypeList("Flying");
 		p145.setSpritePic("resources/145.png");
+		p145.addToEvoFamily(p145);
 		addToDexList(p145);
 		
 		//Moltres
@@ -1098,6 +1225,7 @@ public class Pokedex
 		p146.addToTypeList("Fire");
 		p146.addToTypeList("Flying");
 		p146.setSpritePic("resources/146.png");
+		p146.addToEvoFamily(p146);
 		addToDexList(p146);
 		
 		//Dratini-Dragonite goes here TEST2
@@ -1112,6 +1240,7 @@ public class Pokedex
 		p150.addToTypeList("Psychic");
 		p150.addToTypeList(null);
 		p150.setSpritePic("resources/150.png");
+		p150.addToEvoFamily(p150);
 		addToDexList(p150);
 		
 		//Mew
@@ -1124,6 +1253,7 @@ public class Pokedex
 		p151.addToTypeList("Psychic");
 		p151.addToTypeList(null);
 		p151.setSpritePic("resources/151.png");
+		p151.addToEvoFamily(p151);
 		addToDexList(p151);
 		
 	}
