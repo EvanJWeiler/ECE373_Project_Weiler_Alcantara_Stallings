@@ -42,6 +42,221 @@ public class Pokedex
 		return tempList;
 	}
 	
+	public Pokemon CalculateWinner(Pokemon p1, Pokemon p2, int CP1, int CP2) {//I am setting this up so that p1 is our pokemon, and p2 is the opponent's
+		double typeCalculation = 0;
+		double modifiedCP = 0;
+		
+		typeCalculation = CompareTypes(p1, p2);//this is the value to modify the cp of our pokemon based on type weaknesses and resistances
+		modifiedCP = CP1 * typeCalculation;
+		if(modifiedCP > CP2) {//comparison between modified CP for our pokemon and the cp of the opponent
+			return p1;
+		}
+		else if(modifiedCP < CP2) {
+			return p2;
+		}
+		else {
+			return p2;
+		}
+		
+		
+	}
+	
+	public double CompareTypes(Pokemon p1, Pokemon p2) {//This is gonna be one MASSIVE if else statement
+		int numberOfTypesP1 = 0;
+		int numberOfTypesP2 = 0;
+		double typeCalculation = 0;
+		double typeCalculation2 = 0;
+		double typeCalculation3 = 0;
+		double typeCalculation4 = 0;
+		numberOfTypesP1 = p1.getTypeList().size();
+		numberOfTypesP2 = p2.getTypeList().size();
+		
+		if(numberOfTypesP1 == 1 && numberOfTypesP2 == 1) {//both pokemon are one type
+			typeCalculation = comparison(p1.getTypeList().get(0), p2.getTypeList().get(0));
+		}
+		else if(numberOfTypesP1 == 1 && numberOfTypesP2 == 2) {
+			typeCalculation = comparison(p1.getTypeList().get(0), p2.getTypeList().get(0));
+			typeCalculation2 = comparison(p1.getTypeList().get(0), p2.getTypeList().get(1));
+			
+			if(typeCalculation == typeCalculation2) {
+				typeCalculation = typeCalculation;
+			}
+			else {
+				typeCalculation = typeCalculation * typeCalculation2;
+			}
+		}
+		else if(numberOfTypesP1 == 2 && numberOfTypesP2 == 1) {
+			typeCalculation = comparison(p1.getTypeList().get(0), p2.getTypeList().get(0));
+			typeCalculation2 = comparison(p1.getTypeList().get(1), p2.getTypeList().get(0));
+			
+			if(typeCalculation == typeCalculation2) {
+				typeCalculation = typeCalculation;
+			}
+			else {
+				typeCalculation = typeCalculation * typeCalculation2;
+			}
+		}
+		else {
+			typeCalculation = comparison(p1.getTypeList().get(0), p2.getTypeList().get(0));
+			typeCalculation2 = comparison(p1.getTypeList().get(0), p2.getTypeList().get(1));
+			typeCalculation3 = comparison(p1.getTypeList().get(1), p2.getTypeList().get(0));
+			typeCalculation4 = comparison(p1.getTypeList().get(1), p2.getTypeList().get(1));
+			
+			if(typeCalculation == typeCalculation3) {
+				typeCalculation = typeCalculation;
+			}
+			if(typeCalculation2 == typeCalculation4) {
+				typeCalculation2 = typeCalculation2;
+			}
+			else {
+				typeCalculation = typeCalculation * typeCalculation3;
+				typeCalculation2 = typeCalculation2 * typeCalculation4;
+			}
+			typeCalculation = typeCalculation * typeCalculation2;
+		}
+		
+		return typeCalculation;
+	}
+	
+	public double comparison(String t1, String t2) {
+		double typeCalculation = 0;
+		
+		if(t1 == "Normal" && (t2 == "Steel" || t2 == "Rock")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Normal" && t2 == "Ghost") {//Ghost types aren't affected by normal types
+			typeCalculation = 0;
+		}
+		else if(t1 == "Fire" && (t2 == "Fire" || t2 == "Water" || t2 == "Rock" || t2 == "Dragon")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Fire" && (t2 == "Grass" || t2 == "Ice" || t2 == "Bug" || t2 == "Steel")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Water" && (t2 == "Water" || t2 == "Ice" || t2 == "Dragon")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Water" && (t2 == "Fire" || t2 == "Ground" || t2 == "Rock")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Electric" && (t2 == "Electric" || t2 == "Grass" || t2 == "Dragon")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Electric" && t2 == "Ground") {
+			typeCalculation = 0;
+		}
+		else if(t1 == "Electric" && (t2 == "Water" || t2 == "Flying")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Grass" && (t2 == "Fire" || t2 == "Grass" || t2 == "Poison" || t2 == "Flying" || t2 == "Bug" || t2 == "Dragon" || t2 == "Steel")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Grass" && (t2 == "Water" || t2 == "Ground" || t2 == "Rock")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Ice" && (t2 == "Fire" || t2 == "Water" || t2 == "Ice" ||t2 == "Steel")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Ice" && (t2 == "Grass" || t2 == "Ground" || t2 == "Flying" || t2 == "Dragon")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Fighting" && (t2 == "Poison" || t2 == "Flying" || t2 == "Psychic" || t2 == "Bug" || t2 == "Fairy")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Fighting" && (t2 == "Normal" || t2 == "Ice" || t2 == "Rock" || t2 == "Dark" || t2 == "Steel")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Fighting" && t2 == "Ghost") {
+			typeCalculation = 0;
+		}
+		else if(t1 == "Poison" && (t2 == "Poison" || t2 == "Ground" || t2 == "Rock" || t2 == "Ghost")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Poison" && (t2 == "Grass" || t2 == "Fairy")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Poison" && t2 == "Steel") {
+			typeCalculation = 0;
+		}
+		else if(t1 == "Ground" && (t2 == "Grass" || t2 == "Bug")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Ground" && (t2 == "Fire" || t2 == "Electric" || t2 == "Poison" || t2 == "Rock" || t2 == "Steel")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Ground" && t2 == "Flying") {
+			typeCalculation = 0;
+		}
+		else if(t1 == "Flying" && (t2 == "Electric" || t2 == "Rock" || t2 == "Steel")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Flying" && (t2 == "Grass" || t2 == "Fighting" || t2 == "Bug")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Psychic" && (t2 == "Psychic" || t2 == "Steel")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Psychic" && (t2 == "Fighting" || t2 == "Poison")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Psychic" && (t2 == "Dark")) {
+			typeCalculation = 0;
+		}
+		else if(t1 == "Bug" && (t2 == "Fire" || t2 == "Fighting" || t2 == "Poison" || t2 == "Flying" || t2 == "Ghost" || t2 == "Steel" || t2 == "Fairy")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Bug" && (t2 == "Grass" || t2 == "Psychic" || t2 == "Dark")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Rock" && (t2 == "Fighting" || t2 == "Ground" || t2 == "Steel")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Rock" && (t2 == "Fire" || t2 == "Ice" || t2 == "Flying" || t2 == "Bug")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Ghost" && t2 == "Dark") {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Ghost" && (t2 == "Psychic" || t2 == "Ghost")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Ghost" && t2 == "Normal") {
+			typeCalculation = 0;
+		}
+		else if(t1 == "Dragon" && (t2 == "Steel")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Dragon" && t2 == "Dragon") {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Dragon" && t2 == "Fairy") {
+			typeCalculation = 0;
+		}
+		else if(t1 == "Dark" && (t2 == "Fighting" || t2 == "Dark" || t2 == "Fairy")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Dark" && (t2 == "Psychic" || t2 == "Ghost")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Steel" && (t2 == "Fire" || t2 == "Water" || t2 == "Electric" || t2 == "Steel")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Steel" && (t2 == "Ice" || t2 == "Rock" || t2 == "Fairy")) {
+			typeCalculation = 2;
+		}
+		else if(t1 == "Fairy" && (t2 == "Normal" || t2 == "Poison" || t2 == "Steel")) {
+			typeCalculation = 0.5;
+		}
+		else if(t1 == "Fairy" && (t2 == "Fighting" || t2 == "Dragon" || t2 == "Dark")) {
+			typeCalculation = 2;
+		}
+		else {
+			typeCalculation = 1;
+		}
+		
+		return 1;
+	}
+	
 	public void addGenerationOne() //FIXME: finish adding pokemon
 	{	
 		//Bulbasaur
@@ -1180,7 +1395,124 @@ public class Pokedex
 		p76.addToEvoFamily(p74);
 		p76.addToEvoFamily(p75);
 		p76.addToEvoFamily(p76);
-				
+		
+		//Ponyta
+		
+		Pokemon p77 = new Pokemon("Ponyta");
+		p77.setPokeNum(77);
+		p77.setGeneration(1);
+		p77.setHeight(1.0);
+		p77.setWeight(30.0);
+		p77.addToTypeList("Fire");
+		p77.addToTypeList(null);
+		p77.setSpritePic("resources/77.png");
+		addToDexList(p77);
+		
+		//Rapidash
+		
+		Pokemon p78 = new Pokemon("Rapidash");
+		p78.setPokeNum(78);
+		p78.setGeneration(1);
+		p78.setHeight(1.7);
+		p78.setWeight(95.0);
+		p78.addToTypeList("Fire");
+		p78.addToTypeList(null);
+		p78.setSpritePic("resources/78.png");
+		addToDexList(p78);
+		
+		//RapidEvoFam
+		
+		p77.addToEvoFamily(p77);
+		p77.addToEvoFamily(p78);
+		p78.addToEvoFamily(p77);
+		p78.addToEvoFamily(p78);
+		
+		//Slowpoke
+		
+		Pokemon p79 = new Pokemon("Slowpoke");
+		p79.setPokeNum(79);
+		p79.setGeneration(1);
+		p79.setHeight(1.2);
+		p79.setWeight(36.0);
+		p79.addToTypeList("Water");
+		p79.addToTypeList("Psychic");
+		addToDexList(p79);
+		
+		//Slowbro
+		
+		Pokemon p80 = new Pokemon("Slowbro");
+		p80.setPokeNum(80);
+		p80.setGeneration(1);
+		p80.setHeight(1.6);
+		p80.setWeight(78.5);
+		p80.addToTypeList("Water");
+		p80.addToTypeList("Psychic");
+		addToDexList(p80);
+		
+		//SlowEvoFam
+		
+		p79.addToEvoFamily(p79);
+		p79.addToEvoFamily(p80);
+		p80.addToEvoFamily(p79);
+		p80.addToEvoFamily(p80);
+		
+		//Magnemite
+		
+		Pokemon p81 = new Pokemon("Magnemite");
+		p81.setPokeNum(81);
+		p81.setGeneration(1);
+		p81.setHeight(0.3);
+		p81.setWeight(6.0);
+		p81.addToTypeList("Electric");
+		p81.addToTypeList("Steel");
+		addToDexList(p81);
+		
+		//Magneton
+		
+		Pokemon p82 = new Pokemon("Magneton");
+		p82.setPokeNum(82);
+		p82.setGeneration(1);
+		p82.setHeight(1.0);
+		p82.setWeight(60.0);
+		p82.addToTypeList("Electric");
+		p82.addToTypeList("Steel");
+		addToDexList(p82);
+		
+		//MagEvoFam
+		
+		p81.addToEvoFamily(p81);
+		p81.addToEvoFamily(p82);
+		p82.addToEvoFamily(p81);
+		p82.addToEvoFamily(p82);
+		
+		//Farfetchd
+		
+		Pokemon p83 = new Pokemon("Farfetch'd");
+		p83.setPokeNum(83);
+		p83.setGeneration(1);
+		p83.setHeight(0.8);
+		p83.setWeight(15.0);
+		p83.addToTypeList("Normal");
+		p83.addToTypeList("Flying");
+		p83.addToEvoFamily(p83);
+		addToDexList(p83);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
