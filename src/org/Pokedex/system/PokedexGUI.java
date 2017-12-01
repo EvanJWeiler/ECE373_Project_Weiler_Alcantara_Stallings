@@ -498,12 +498,14 @@ public class PokedexGUI extends JFrame {
 		JPanel bottomLeft = new JPanel();
 		JPanel bottomRight = new JPanel();
 		JPanel buttonPanel = new JPanel();
+		JPanel winnerPanel = new JPanel();
 		
 		Pokemon pokemon1 = findPokemon(Integer.parseInt(num1), name1);
 		Pokemon pokemon2 = findPokemon(Integer.parseInt(num2), name2);
 		
 		//set Layouts
 		topPanel.setLayout(new FlowLayout());
+		winnerPanel.setLayout(new FlowLayout());
 		bottomPanel.setLayout(new FlowLayout());
 		bottomLeft.setLayout(new BoxLayout(bottomLeft, BoxLayout.PAGE_AXIS));
 		bottomRight.setLayout(new BoxLayout(bottomRight, BoxLayout.PAGE_AXIS));
@@ -529,10 +531,12 @@ public class PokedexGUI extends JFrame {
 		JLabel imgLabel2 = new JLabel(new ImageIcon(image2));
 		imgLabel2.setAlignmentX(CENTER_ALIGNMENT);
 		
-		//FIXME: add recommendation level bar
+		//initialize winner panel
+		JLabel winner = new JLabel("Winner: " + p1.CalculateWinner(pokemon1, pokemon2, Integer.parseInt(cp1), Integer.parseInt(cp2)).getName());
+		winner.setAlignmentX(CENTER_ALIGNMENT);
 		
 		//initialize bottomLeft Labels
-		JLabel pokeNameL = new JLabel("   " + pokemon1.getName());
+		JLabel pokeNameL = new JLabel(" " + pokemon1.getName());
 		pokeNameL.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel whiteSpaceL = new JLabel("    ");
 		whiteSpaceL.setAlignmentX(LEFT_ALIGNMENT);
@@ -548,7 +552,7 @@ public class PokedexGUI extends JFrame {
 		//ivL.setAlignmentX(LEFT_ALIGNMENT);
 		
 		//initialize bottomRight Labels
-		JLabel pokeNameR = new JLabel("   " + pokemon2.getName());
+		JLabel pokeNameR = new JLabel(" " + pokemon2.getName());
 		pokeNameR.setAlignmentX(LEFT_ALIGNMENT);
 		JLabel whiteSpaceR = new JLabel("    ");
 		whiteSpaceR.setAlignmentX(LEFT_ALIGNMENT);
@@ -578,6 +582,9 @@ public class PokedexGUI extends JFrame {
 		topPanel.add(imgLabel1);
 		topPanel.add(vs);
 		topPanel.add(imgLabel2);
+		
+		//add to winner panel
+		winnerPanel.add(winner);
 		
 		//add to bottomLeft
 		bottomLeft.add(pokeNameL);
@@ -628,6 +635,7 @@ public class PokedexGUI extends JFrame {
 		
 		//add to structure
 		structure.add(topPanel);
+		structure.add(winnerPanel);
 		structure.add(bottomPanel);
 		structure.add(buttonPanel);
 		

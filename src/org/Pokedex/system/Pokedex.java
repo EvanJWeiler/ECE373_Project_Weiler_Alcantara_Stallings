@@ -105,11 +105,13 @@ public class Pokedex
 			if(typeCalculation == typeCalculation3) {
 				typeCalculation = typeCalculation;
 			}
+			else
+				typeCalculation = typeCalculation * typeCalculation3;
 			if(typeCalculation2 == typeCalculation4) {
 				typeCalculation2 = typeCalculation2;
 			}
 			else {
-				typeCalculation = typeCalculation * typeCalculation3;
+				//typeCalculation = typeCalculation * typeCalculation3;
 				typeCalculation2 = typeCalculation2 * typeCalculation4;
 			}
 			typeCalculation = typeCalculation * typeCalculation2;
@@ -254,7 +256,7 @@ public class Pokedex
 			typeCalculation = 1;
 		}
 		
-		return 1;
+		return typeCalculation;
 	}
 	
 	public void addGenerationOne() //FIXME: finish adding pokemon
@@ -278,7 +280,7 @@ public class Pokedex
 		p2.setWeight(13.0);
 		p2.addToTypeList("Grass");
 		p2.addToTypeList("Poison");
-		p2.setSpritePic("resources/2.png");//FIXME: change after adding correct sprite
+		p2.setSpritePic("resources/2.png");
 		addToDexList(p2);
 		
 		//Venusaur
@@ -289,7 +291,7 @@ public class Pokedex
 		p3.setWeight(100.0);
 		p3.addToTypeList("Grass");
 		p3.addToTypeList("Poison");
-		p3.setSpritePic("resources/3.png"); //FIXME: change after adding correct sprite
+		p3.setSpritePic("resources/3.png");
 		addToDexList(p3);
 		
 		//BulbEvoFam
@@ -311,7 +313,7 @@ public class Pokedex
 		p4.setWeight(8.5);
 		p4.addToTypeList("Fire");
 		p4.addToTypeList(null);
-		p4.setSpritePic("resources/4.png"); //FIXME: change after adding correct sprite
+		p4.setSpritePic("resources/4.png");
 		addToDexList(p4);
 		
 		//Charmeleon
