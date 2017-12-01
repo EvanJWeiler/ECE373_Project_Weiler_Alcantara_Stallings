@@ -58,7 +58,7 @@ public class PokedexGUI extends JFrame {
 				if (currPokemon != null)
 					LaunchInfoScreen(currPokemon);
 				else
-					JOptionPane.showMessageDialog(new JFrame(), "Please select a Pokemon", "No Pokemon Selected", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(new JFrame(), "Please select a Pokemon", "No Pokemon Selected", JOptionPane.WARNING_MESSAGE); //evan sux
 			}
 		});
 		
