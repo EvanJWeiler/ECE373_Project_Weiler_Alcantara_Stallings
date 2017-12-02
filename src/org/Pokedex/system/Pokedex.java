@@ -906,7 +906,6 @@ public class Pokedex
 		addToDexList(p45);
 		
 		//OddishEvoFam
-		
 		p43.addToEvoFamily(p43);
 		p43.addToEvoFamily(p44);
 		p43.addToEvoFamily(p45);
@@ -918,7 +917,6 @@ public class Pokedex
 		p45.addToEvoFamily(p45);
 	
 		//Paras
-		
 		Pokemon p46 = new Pokemon("Paras");
 		p46.setPokeNum(46);
 		p46.setGeneration(1);
@@ -930,7 +928,6 @@ public class Pokedex
 		addToDexList(p46);
 		
 		//Parasect
-		
 		Pokemon p47 = new Pokemon("Parasect");
 		p47.setPokeNum(47);
 		p47.setGeneration(1);
@@ -942,14 +939,12 @@ public class Pokedex
 		addToDexList(p47);
 		
 		//ParasEvoFam
-		
 		p46.addToEvoFamily(p46);
 		p46.addToEvoFamily(p47);
 		p47.addToEvoFamily(p46);
 		p47.addToEvoFamily(p47);
 		
 		//Venonat
-		
 		Pokemon p48 = new Pokemon("Venonat");
 		p48.setPokeNum(48);
 		p48.setGeneration(1);
@@ -961,7 +956,6 @@ public class Pokedex
 		addToDexList(p48);
 		
 		//Venomoth
-		
 		Pokemon p49 = new Pokemon("Venomoth");
 		p49.setPokeNum(49);
 		p49.setGeneration(1);
@@ -973,14 +967,12 @@ public class Pokedex
 		addToDexList(p49);
 		
 		//VenoEvoFam
-		
 		p48.addToEvoFamily(p48);
 		p48.addToEvoFamily(p49);
 		p49.addToEvoFamily(p48);
 		p49.addToEvoFamily(p49);
 		
 		//Diglett
-		
 		Pokemon p50 = new Pokemon("Diglett");
 		p50.setPokeNum(50);
 		p50.setGeneration(1);
@@ -992,7 +984,6 @@ public class Pokedex
 		addToDexList(p50);
 		
 		//Dugtrio
-		
 		Pokemon p51 = new Pokemon("Dugtrio");
 		p51.setPokeNum(51);
 		p51.setGeneration(1);
@@ -1004,14 +995,12 @@ public class Pokedex
 		addToDexList(p51);
 		
 		//DugEvoFam
-		
 		p50.addToEvoFamily(p50);
 		p50.addToEvoFamily(p51);
 		p51.addToEvoFamily(p50);
 		p51.addToEvoFamily(p51);
 		
 		//Meowth
-		
 		Pokemon p52 = new Pokemon("Meowth");
 		p52.setPokeNum(52);
 		p52.setGeneration(1);
@@ -1023,7 +1012,6 @@ public class Pokedex
 		addToDexList(p52);
 		
 		//Persian
-		
 		Pokemon p53 = new Pokemon("Persian");
 		p53.setPokeNum(53);
 		p53.setGeneration(1);
@@ -1035,14 +1023,12 @@ public class Pokedex
 		addToDexList(p53);
 		
 		//MeoEvoFam
-		
 		p52.addToEvoFamily(p52);
 		p52.addToEvoFamily(p53);
 		p53.addToEvoFamily(p52);
 		p53.addToEvoFamily(p53);
 		
 		//Psyduck
-		
 		Pokemon p54 = new Pokemon("Psyduck");
 		p54.setPokeNum(54);
 		p54.setGeneration(1);
@@ -1054,7 +1040,6 @@ public class Pokedex
 		addToDexList(p54);
 		
 		//Golduck
-		
 		Pokemon p55 = new Pokemon("Golduck");
 		p55.setPokeNum(55);
 		p55.setGeneration(1);
@@ -1066,14 +1051,12 @@ public class Pokedex
 		addToDexList(p55);
 		
 		//PsyEvoFam
-		
 		p54.addToEvoFamily(p54);
 		p54.addToEvoFamily(p55);
 		p55.addToEvoFamily(p54);
 		p55.addToEvoFamily(p55);
 		
 		//Mankey
-		
 		Pokemon p56 = new Pokemon("Mankey");
 		p56.setPokeNum(56);
 		p56.setGeneration(1);
@@ -1085,7 +1068,6 @@ public class Pokedex
 		addToDexList(p56);
 		
 		//Primeape
-		
 		Pokemon p57 = new Pokemon("Primeape");
 		p57.setPokeNum(57);
 		p57.setGeneration(1);
@@ -1097,14 +1079,12 @@ public class Pokedex
 		addToDexList(p57);
 		
 		//MankEvoFam
-		
 		p56.addToEvoFamily(p56);
 		p56.addToEvoFamily(p57);
 		p57.addToEvoFamily(p56);
 		p57.addToEvoFamily(p57);
 		
 		//Growlithe
-		
 		Pokemon p58 = new Pokemon("Growlithe");
 		p58.setPokeNum(58);
 		p58.setGeneration(1);
@@ -1116,7 +1096,6 @@ public class Pokedex
 		addToDexList(p58);
 		
 		//Arcanine
-		
 		Pokemon p59 = new Pokemon("Arcanine");
 		p59.setPokeNum(59);
 		p59.setGeneration(1);
@@ -1128,7 +1107,6 @@ public class Pokedex
 		addToDexList(p59);
 		
 		//Poliwag
-		
 		Pokemon p60 = new Pokemon("Poliwag");
 		p60.setPokeNum(60);
 		p60.setGeneration(1);
@@ -1140,7 +1118,6 @@ public class Pokedex
 		addToDexList(p60);
 		
 		//Poliwhirl
-		
 		Pokemon p61 = new Pokemon("Poliwhirl");
 		p61.setPokeNum(61);
 		p61.setGeneration(1);
@@ -1152,7 +1129,6 @@ public class Pokedex
 		addToDexList(p61);
 		
 		//Poliwrath
-		
 		Pokemon p62 = new Pokemon("Poliwrath");
 		p62.setPokeNum(62);
 		p62.setGeneration(1);
@@ -1164,7 +1140,6 @@ public class Pokedex
 		addToDexList(p62);
 		
 		//PoliEvoFam
-		
 		p60.addToEvoFamily(p60);
 		p60.addToEvoFamily(p61);
 		p60.addToEvoFamily(p62);
@@ -1176,7 +1151,6 @@ public class Pokedex
 		p62.addToEvoFamily(p62);
 		
 		//Abra
-		
 		Pokemon p63 = new Pokemon("Abra");
 		p63.setPokeNum(63);
 		p63.setGeneration(1);
@@ -1188,7 +1162,6 @@ public class Pokedex
 		addToDexList(p63);
 		
 		//Kadabra
-		
 		Pokemon p64 = new Pokemon("Kadabra");
 		p64.setPokeNum(64);
 		p64.setGeneration(1);
@@ -1200,7 +1173,6 @@ public class Pokedex
 		addToDexList(p64);
 		
 		//Alakazam
-		
 		Pokemon p65 = new Pokemon("Alakazam");
 		p65.setPokeNum(65);
 		p65.setGeneration(1);
@@ -1212,7 +1184,6 @@ public class Pokedex
 		addToDexList(p65);
 		
 		//AbraEvoFam
-		
 		p63.addToEvoFamily(p63);
 		p63.addToEvoFamily(p64);
 		p63.addToEvoFamily(p65);
@@ -1224,7 +1195,6 @@ public class Pokedex
 		p65.addToEvoFamily(p65);
 		
 		//Machop
-		
 		Pokemon p66 = new Pokemon("Machop");
 		p66.setPokeNum(66);
 		p66.setGeneration(1);
@@ -1236,7 +1206,6 @@ public class Pokedex
 		addToDexList(p66);
 		
 		//Machoke
-		
 		Pokemon p67 = new Pokemon("Machoke");
 		p67.setPokeNum(67);
 		p67.setGeneration(1);
@@ -1248,7 +1217,6 @@ public class Pokedex
 		addToDexList(p67);
 		
 		//Machamp
-		
 		Pokemon p68 = new Pokemon("Machamp");
 		p68.setPokeNum(68);
 		p68.setGeneration(1);
@@ -1260,7 +1228,6 @@ public class Pokedex
 		addToDexList(p68);
 		
 		//MachEvoFam
-		
 		p66.addToEvoFamily(p66);
 		p66.addToEvoFamily(p67);
 		p66.addToEvoFamily(p68);
@@ -1272,7 +1239,6 @@ public class Pokedex
 		p68.addToEvoFamily(p68);
 		
 		//Bellsprout
-		
 		Pokemon p69 = new Pokemon("Bellsprout"); //nice
 		p69.setPokeNum(69);
 		p69.setGeneration(1);
@@ -1284,7 +1250,6 @@ public class Pokedex
 		addToDexList(p69);
 		
 		//Weepinbell
-		
 		Pokemon p70 = new Pokemon("Weepinbell");
 		p70.setPokeNum(70);
 		p70.setGeneration(1);
@@ -1296,7 +1261,6 @@ public class Pokedex
 		addToDexList(p70);
 		
 		//Victreebel
-		
 		Pokemon p71 = new Pokemon("Victreebel");
 		p71.setPokeNum(71);
 		p71.setGeneration(1);
@@ -1308,7 +1272,6 @@ public class Pokedex
 		addToDexList(p71);
 		
 		//BellEvoFam
-		
 		p69.addToEvoFamily(p69);
 		p69.addToEvoFamily(p70);
 		p69.addToEvoFamily(p71);
@@ -1320,7 +1283,6 @@ public class Pokedex
 		p71.addToEvoFamily(p71);
 		
 		//Tentacool
-		
 		Pokemon p72 = new Pokemon("Tentacool");
 		p72.setPokeNum(72);
 		p72.setGeneration(1);
@@ -1332,7 +1294,6 @@ public class Pokedex
 		addToDexList(p72);
 		
 		//Tentacruel
-		
 		Pokemon p73 = new Pokemon("Tentacruel");
 		p73.setPokeNum(73);
 		p73.setGeneration(1);
@@ -1344,14 +1305,12 @@ public class Pokedex
 		addToDexList(p73);
 		
 		//TentEvoFam
-		
 		p72.addToEvoFamily(p72);
 		p72.addToEvoFamily(p73);
 		p73.addToEvoFamily(p72);
 		p73.addToEvoFamily(p73);
 		
 		//Geodude
-		
 		Pokemon p74 = new Pokemon("Geodude");
 		p74.setPokeNum(74);
 		p74.setGeneration(1);
@@ -1363,7 +1322,6 @@ public class Pokedex
 		addToDexList(p74);
 		
 		//Graveler
-		
 		Pokemon p75 = new Pokemon("Graveler");
 		p75.setPokeNum(75);
 		p75.setGeneration(1);
@@ -1375,7 +1333,6 @@ public class Pokedex
 		addToDexList(p75);
 		
 		//Golem
-		
 		Pokemon p76 = new Pokemon("Golem");
 		p76.setPokeNum(76);
 		p76.setGeneration(1);
@@ -1387,7 +1344,6 @@ public class Pokedex
 		addToDexList(p76);
 		
 		//GeoEvoFam
-		
 		p74.addToEvoFamily(p74);
 		p74.addToEvoFamily(p75);
 		p74.addToEvoFamily(p76);
@@ -1399,7 +1355,6 @@ public class Pokedex
 		p76.addToEvoFamily(p76);
 		
 		//Ponyta
-		
 		Pokemon p77 = new Pokemon("Ponyta");
 		p77.setPokeNum(77);
 		p77.setGeneration(1);
@@ -1411,7 +1366,6 @@ public class Pokedex
 		addToDexList(p77);
 		
 		//Rapidash
-		
 		Pokemon p78 = new Pokemon("Rapidash");
 		p78.setPokeNum(78);
 		p78.setGeneration(1);
@@ -1423,14 +1377,12 @@ public class Pokedex
 		addToDexList(p78);
 		
 		//RapidEvoFam
-		
 		p77.addToEvoFamily(p77);
 		p77.addToEvoFamily(p78);
 		p78.addToEvoFamily(p77);
 		p78.addToEvoFamily(p78);
 		
 		//Slowpoke
-		
 		Pokemon p79 = new Pokemon("Slowpoke");
 		p79.setPokeNum(79);
 		p79.setGeneration(1);
@@ -1441,7 +1393,6 @@ public class Pokedex
 		addToDexList(p79);
 		
 		//Slowbro
-		
 		Pokemon p80 = new Pokemon("Slowbro");
 		p80.setPokeNum(80);
 		p80.setGeneration(1);
@@ -1452,14 +1403,12 @@ public class Pokedex
 		addToDexList(p80);
 		
 		//SlowEvoFam
-		
 		p79.addToEvoFamily(p79);
 		p79.addToEvoFamily(p80);
 		p80.addToEvoFamily(p79);
 		p80.addToEvoFamily(p80);
 		
 		//Magnemite
-		
 		Pokemon p81 = new Pokemon("Magnemite");
 		p81.setPokeNum(81);
 		p81.setGeneration(1);
@@ -1470,7 +1419,6 @@ public class Pokedex
 		addToDexList(p81);
 		
 		//Magneton
-		
 		Pokemon p82 = new Pokemon("Magneton");
 		p82.setPokeNum(82);
 		p82.setGeneration(1);
@@ -1481,14 +1429,12 @@ public class Pokedex
 		addToDexList(p82);
 		
 		//MagEvoFam
-		
 		p81.addToEvoFamily(p81);
 		p81.addToEvoFamily(p82);
 		p82.addToEvoFamily(p81);
 		p82.addToEvoFamily(p82);
 		
 		//Farfetchd
-		
 		Pokemon p83 = new Pokemon("Farfetch'd");
 		p83.setPokeNum(83);
 		p83.setGeneration(1);
@@ -1499,10 +1445,131 @@ public class Pokedex
 		p83.addToEvoFamily(p83);
 		addToDexList(p83);
 		
+		//Doduo
+		Pokemon p84 = new Pokemon("Doduo");
+		addToDexList(p84);
 		
+		//Dodrio
+		Pokemon p85 = new Pokemon("Dodrio");
+		addToDexList(p85);
 		
+		//DodEvoFam
+		p84.addToEvoFamily(p84);
+		p84.addToEvoFamily(p85);
+		p85.addToEvoFamily(p84);
+		p85.addToEvoFamily(p85);
 		
+		//Seel
+		Pokemon p86 = new Pokemon("Seel");
+		addToDexList(p86);
 		
+		//Dewgong
+		Pokemon p87 = new Pokemon("Dewgong");
+		addToDexList(p87);
+		
+		//SeelEvoFam
+		p86.addToEvoFamily(p86);
+		p86.addToEvoFamily(p87);
+		p87.addToEvoFamily(p86);
+		p87.addToEvoFamily(p87);
+		
+		//Grimer
+		Pokemon p88 = new Pokemon("Grimer");
+		addToDexList(p88);
+		
+		//Muk
+		Pokemon p89 = new Pokemon("Muk");
+		addToDexList(p89);
+		
+		//GrimerEvoFam
+		p88.addToEvoFamily(p88);
+		p88.addToEvoFamily(p89);
+		p89.addToEvoFamily(p88);
+		p89.addToEvoFamily(p89);
+		
+		//Shellder
+		Pokemon p90 = new Pokemon("Shellder");
+		addToDexList(p90);
+		
+		//Cloyster
+		Pokemon p91 = new Pokemon("Cloyster");
+		addToDexList(p91);
+		
+		//ShellEvoFam
+		p90.addToEvoFamily(p90);
+		p90.addToEvoFamily(p91);
+		p91.addToEvoFamily(p90);
+		p91.addToEvoFamily(p91);
+		
+		//Gastly
+		Pokemon p92 = new Pokemon("Gastly");
+		addToDexList(p92);
+		
+		//Haunter
+		Pokemon p93 = new Pokemon("Haunter");
+		addToDexList(p93);
+		
+		//Gengar
+		Pokemon p94 = new Pokemon("Gengar");
+		addToDexList(p94);
+		
+		//GastEvoFam
+		p92.addToEvoFamily(p92);
+		p92.addToEvoFamily(p93);
+		p92.addToEvoFamily(p94);
+		p93.addToEvoFamily(p92);
+		p93.addToEvoFamily(p93);
+		p93.addToEvoFamily(p94);
+		p94.addToEvoFamily(p92);
+		p94.addToEvoFamily(p93);
+		p94.addToEvoFamily(p94);
+		
+		//Onix
+		Pokemon p95 = new Pokemon("Onix");
+		addToDexList(p95);
+		p95.addToEvoFamily(p95);
+		
+		//Drowzee
+		Pokemon p96 = new Pokemon("Drowzee");
+		addToDexList(p96);
+		
+		//Hypno
+		Pokemon p97 = new Pokemon("Hypno");
+		addToDexList(p97);
+		
+		//DrowEvoFam
+		p96.addToEvoFamily(p96);
+		p96.addToEvoFamily(p97);
+		p97.addToEvoFamily(p96);
+		p97.addToEvoFamily(p97);
+		
+		//Krabby
+		Pokemon p98 = new Pokemon("Krabby");
+		addToDexList(p98);
+		
+		//Kingler
+		Pokemon p99 = new Pokemon("Kingler");
+		addToDexList(p99);
+		
+		//KrabEvoFam
+		p98.addToEvoFamily(p98);
+		p98.addToEvoFamily(p99);
+		p99.addToEvoFamily(p98);
+		p99.addToEvoFamily(p99);
+		
+		//Voltorb
+		Pokemon p100 = new Pokemon("Voltorb");
+		addToDexList(p100);
+		
+		//Electrode
+		Pokemon p101 = new Pokemon("Electrode");
+		addToDexList(p101);
+		
+		//VoltEvoFam
+		p100.addToEvoFamily(p100);
+		p100.addToEvoFamily(p101);
+		p101.addToEvoFamily(p100);
+		p101.addToEvoFamily(p101);
 		
 		
 		
