@@ -1571,24 +1571,273 @@ public class Pokedex
 		p101.addToEvoFamily(p100);
 		p101.addToEvoFamily(p101);
 		
+		//Exeggcute
+		Pokemon p102 = new Pokemon("Exeggcute");
+		addToDexList(p102);
 		
+		//Exeggutor
+		Pokemon p103 = new Pokemon("Exeggutor");
+		addToDexList(p103);
 		
+		//EggEvoFamm
+		p102.addToEvoFamily(p102);
+		p102.addToEvoFamily(p103);
+		p103.addToEvoFamily(p102);
+		p103.addToEvoFamily(p103);
 		
+		//Cubone
+		Pokemon p104 = new Pokemon("Cubone");
+		addToDexList(p104);
 		
+		//Marowak
+		Pokemon p105 = new Pokemon("Marowak");
+		addToDexList(p105);
 		
+		//BoneEvoFam
+		p104.addToEvoFamily(p104);
+		p104.addToEvoFamily(p105);
+		p105.addToEvoFamily(p104);
+		p105.addToEvoFamily(p105);
 		
+		//Hitmonlee
+		Pokemon p106 = new Pokemon("Hitmonlee");
+		addToDexList(p106);
 		
+		//Hitmonchan
+		Pokemon p107 = new Pokemon("Hitmonchan");
+		addToDexList(p107);
 		
+		//HitEvoFam
+		p106.addToEvoFamily(p106);
+		p106.addToEvoFamily(p107);
+		p107.addToEvoFamily(p106);
+		p107.addToEvoFamily(p107);
 		
+		//Lickitung
+		Pokemon p108 = new Pokemon("Lickitung");
+		addToDexList(p108);
+		p108.addToEvoFamily(p108);
 		
+		//Koffing
+		Pokemon p109 = new Pokemon("Koffing");
+		addToDexList(p109);
 		
+		//Weezing
+		Pokemon p110 = new Pokemon("Weezing");
+		addToDexList(p110);
 		
+		//KoffEvoFam
+		p109.addToEvoFamily(p109);
+		p109.addToEvoFamily(p110);
+		p110.addToEvoFamily(p109);
+		p110.addToEvoFamily(p110);
 		
+		//Rhyhorn
+		Pokemon p111 = new Pokemon("Rhyhorn");
+		addToDexList(p111);
 		
+		//Rhydon
+		Pokemon p112 = new Pokemon("Rhydon");
+		addToDexList(p112);
 		
+		//HornEvoFam
+		p111.addToEvoFamily(p111);
+		p111.addToEvoFamily(p112);
+		p112.addToEvoFamily(p111);
+		p112.addToEvoFamily(p112);
 		
+		//Chancey
+		Pokemon p113 = new Pokemon("Chansey");
+		addToDexList(p113);
+		p113.addToEvoFamily(p113);
 		
-		// FIXME OTHER POKEMON TO BE ADDED LATER
+		//Tangela
+		Pokemon p114 = new Pokemon("Tangela");
+		addToDexList(p114);
+		p114.addToEvoFamily(p114);
+		
+		//Kangaskhan
+		Pokemon p115 = new Pokemon("Kangaskhan");
+		addToDexList(p115);
+		p115.addToEvoFamily(p115);
+		
+		//Horsea
+		Pokemon p116 = new Pokemon("Horsea");
+		addToDexList(p116);
+		
+		//Seadra
+		Pokemon p117 = new Pokemon("Seadra");
+		addToDexList(p117);
+		
+		//SeaEvoFam
+		p116.addToEvoFamily(p116);
+		p116.addToEvoFamily(p117);
+		p117.addToEvoFamily(p116);
+		p117.addToEvoFamily(p117);
+		
+		//Goldeen
+		Pokemon p118 = new Pokemon("Goldeen");
+		addToDexList(p118);
+		
+		//Seaking
+		Pokemon p119 = new Pokemon("Seaking");
+		addToDexList(p119);
+		
+		//GoldEvoFam
+		p118.addToEvoFamily(p118);
+		p118.addToEvoFamily(p119);
+		p119.addToEvoFamily(p118);
+		p119.addToEvoFamily(p119);
+		
+		//Staryu
+		Pokemon p120 = new Pokemon("Staryu");
+		addToDexList(p120);
+		
+		//Starmie
+		Pokemon p121 = new Pokemon("Starmie");
+		addToDexList(p121);
+		
+		//StarEvoFam
+		p120.addToEvoFamily(p120);
+		p120.addToEvoFamily(p121);
+		p121.addToEvoFamily(p120);
+		p121.addToEvoFamily(p121);
+		
+		//Mr. Mime
+		Pokemon p122 = new Pokemon("Mr. Mime");
+		addToDexList(p122);
+		p122.addToEvoFamily(p122);
+		
+		//Scyther
+		Pokemon p123 = new Pokemon("Scyther");
+		addToDexList(p123);
+		p123.addToEvoFamily(p123);
+		
+		//Jynx
+		Pokemon p124 = new Pokemon("Jynx");
+		addToDexList(p124);
+		p124.addToEvoFamily(p124);
+		
+		//Electabuzz
+		Pokemon p125 = new Pokemon("Electabuzz");
+		addToDexList(p125);
+		p125.addToEvoFamily(p125);
+		
+		//Magmar
+		Pokemon p126 = new Pokemon("Magmar");
+		addToDexList(p126);
+		p126.addToEvoFamily(p126);
+		
+		//Pinsir
+		Pokemon p127 = new Pokemon("Pinsir");
+		addToDexList(p127);
+		p127.addToEvoFamily(p127);
+		
+		//Tauros
+		Pokemon p128 = new Pokemon("Tauros");
+		addToDexList(p128);
+		p128.addToEvoFamily(p128);
+		
+		//Magikarp
+		Pokemon p129 = new Pokemon("Magikarp");
+		addToDexList(p129);
+		
+		//Gyarados
+		Pokemon p130 = new Pokemon("Gyarados");
+		addToDexList(p130);
+		
+		//KarpEvoFam
+		p129.addToEvoFamily(p129);
+		p129.addToEvoFamily(p130);
+		p130.addToEvoFamily(p129);
+		p130.addToEvoFamily(p130);
+		
+		//Lapras
+		Pokemon p131 = new Pokemon("Lapras");
+		addToDexList(p131);
+		p131.addToEvoFamily(p131);
+		
+		//Ditto
+		Pokemon p132 = new Pokemon("Ditto");
+		addToDexList(p132);
+		p132.addToEvoFamily(p132);
+		
+		//Eevee
+		Pokemon p133 = new Pokemon("Eevee");
+		addToDexList(p133);
+		
+		//Vaporeon
+		Pokemon p134 = new Pokemon("Vaporeon");
+		addToDexList(p134);
+		
+		//Jolteon
+		Pokemon p135 = new Pokemon("Jolteon");
+		addToDexList(p135);
+		
+		//Flareon
+		Pokemon p136 = new Pokemon("Flareon");
+		addToDexList(p136);
+		
+		//EeveeEvoFam
+		p133.addToEvoFamily(p133);
+		p133.addToEvoFamily(p134);
+		p133.addToEvoFamily(p135);
+		p133.addToEvoFamily(p136);
+		p134.addToEvoFamily(p133);
+		p134.addToEvoFamily(p134);
+		p134.addToEvoFamily(p135);
+		p134.addToEvoFamily(p136);
+		p135.addToEvoFamily(p133);
+		p135.addToEvoFamily(p134);
+		p135.addToEvoFamily(p135);
+		p135.addToEvoFamily(p136);
+		p136.addToEvoFamily(p133);
+		p136.addToEvoFamily(p134);
+		p136.addToEvoFamily(p135);
+		p136.addToEvoFamily(p136);
+		
+		//Porygon
+		Pokemon p137 = new Pokemon("Porygon");
+		addToDexList(p137);
+		p137.addToEvoFamily(p137);
+		
+		//Omanyte
+		Pokemon p138 = new Pokemon("Omanyte");
+		addToDexList(p138);
+		
+		//Omastar
+		Pokemon p139 = new Pokemon("Omastar");
+		addToDexList(p139);
+		
+		//OmaEvoFam
+		p138.addToEvoFamily(p138);
+		p138.addToEvoFamily(p139);
+		p139.addToEvoFamily(p138);
+		p139.addToEvoFamily(p139);
+		
+		//Kabuto
+		Pokemon p140 = new Pokemon("Kabuto");
+		addToDexList(p140);
+		
+		//Kabutops
+		Pokemon p141 = new Pokemon("Kabutops");
+		addToDexList(p141);
+		
+		//KabuEvoFam
+		p140.addToEvoFamily(p140);
+		p140.addToEvoFamily(p141);
+		p141.addToEvoFamily(p140);
+		p141.addToEvoFamily(p141);
+		
+		//Aerodactyl
+		Pokemon p142 = new Pokemon("Aerodactyl");
+		addToDexList(p142);
+		p142.addToEvoFamily(p142);
+		
+		//Snorlax
+		Pokemon p143 = new Pokemon("Snorlax");
+		addToDexList(p143);
+		p143.addToEvoFamily(p143);
 		
 		//Articuno
 		Pokemon p144 = new Pokemon("Articuno");
@@ -1629,7 +1878,27 @@ public class Pokedex
 		p146.addToEvoFamily(p146);
 		addToDexList(p146);
 		
-		//Dratini-Dragonite goes here TEST2
+		//Dratini
+		Pokemon p147 = new Pokemon("Dratini");
+		addToDexList(p147);
+		
+		//Dragonair
+		Pokemon p148 = new Pokemon("Dragonair");
+		addToDexList(p148);
+		
+		//Dragonite
+		Pokemon p149 = new Pokemon("Dragonite");
+		addToDexList(p149);
+		
+		p147.addToEvoFamily(p147);
+		p147.addToEvoFamily(p148);
+		p147.addToEvoFamily(p149);
+		p148.addToEvoFamily(p147);
+		p148.addToEvoFamily(p148);
+		p148.addToEvoFamily(p149);
+		p149.addToEvoFamily(p147);
+		p149.addToEvoFamily(p148);
+		p149.addToEvoFamily(p149);
 		
 		//Mewtwo
 		Pokemon p150 = new Pokemon("Mewtwo");
