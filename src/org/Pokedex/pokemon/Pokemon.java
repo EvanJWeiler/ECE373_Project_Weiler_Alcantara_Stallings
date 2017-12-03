@@ -28,7 +28,7 @@ public class Pokemon
 		moveset = new ArrayList<String>();
 		type = new ArrayList<String>();
 		evoFamily = new ArrayList<Pokemon>();
-		spritePic = "resources/1.png";
+		spritePic = "resources/0.png";
 	}
 	
 	public Pokemon(String aName)

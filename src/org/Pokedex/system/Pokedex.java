@@ -1447,10 +1447,22 @@ public class Pokedex
 		
 		//Doduo
 		Pokemon p84 = new Pokemon("Doduo");
+		p84.setPokeNum(84);
+		p84.setGeneration(1);
+		p84.setHeight(1.4);
+		p84.setWeight(39.2);
+		p84.addToTypeList("Normal");
+		p84.addToTypeList("Flying");
 		addToDexList(p84);
 		
 		//Dodrio
 		Pokemon p85 = new Pokemon("Dodrio");
+		p85.setPokeNum(85);
+		p85.setGeneration(1);
+		p85.setHeight(1.8);
+		p85.setWeight(85.2);
+		p85.addToTypeList("Normal");
+		p85.addToTypeList("Flying");
 		addToDexList(p85);
 		
 		//DodEvoFam

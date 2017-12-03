@@ -1660,5 +1660,954 @@ public class PokedexGUI extends JFrame {
 				}
 			}
 		});
+		buttons.get(78).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(78);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(79).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(79);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(80).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(80);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(81).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(81);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(82).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(82);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(83).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(83);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(84).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(84);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(85).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(85);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(86).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(86);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(87).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(87);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(88).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(88);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(89).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(89);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(90).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(90);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(91).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(91);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(92).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(92);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(93).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(93);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(94).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(94);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(95).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(95);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(96).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(96);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(97).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(97);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(98).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(98);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(99).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(99);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(100).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(100);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(101).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(101);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(102).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(102);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(103).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(103);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(104).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(104);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(105).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(105);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(106).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(106);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(107).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(107);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(108).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(108);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(109).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(109);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(110).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(110);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(111).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(111);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(112).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(112);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(113).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(113);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(114).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(114);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(115).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(115);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(116).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(116);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(117).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(117);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(118).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(118);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(119).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(119);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(120).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(120);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(121).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(121);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(122).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(122);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(123).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(123);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(124).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(124);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(125).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(125);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(126).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(126);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(127).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(127);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(128).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(128);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(129).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(129);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(130).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(130);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(131).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(131);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(132).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(132);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(133).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(133);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(134).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(134);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(135).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(135);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(136).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(136);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(137).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(137);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(138).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(138);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(139).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(139);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(140).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(140);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(141).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(141);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(142).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(142);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(143).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(143);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(144).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(144);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(145).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(145);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(146).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(146);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(147).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(147);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(148).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(148);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(149).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(149);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
+		buttons.get(150).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(150);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
 	}
 }
