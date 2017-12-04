@@ -1390,6 +1390,7 @@ public class Pokedex
 		p79.setWeight(36.0);
 		p79.addToTypeList("Water");
 		p79.addToTypeList("Psychic");
+		p79.setSpritePic("resources/79.png");
 		addToDexList(p79);
 		
 		//Slowbro
@@ -1400,6 +1401,7 @@ public class Pokedex
 		p80.setWeight(78.5);
 		p80.addToTypeList("Water");
 		p80.addToTypeList("Psychic");
+		p80.setSpritePic("resources/80.png");
 		addToDexList(p80);
 		
 		//SlowEvoFam
@@ -1416,6 +1418,8 @@ public class Pokedex
 		p81.setWeight(6.0);
 		p81.addToTypeList("Electric");
 		p81.addToTypeList("Steel");
+		p81.setSpritePic("resources/81.png");
+		p81.setGender("Unknown");
 		addToDexList(p81);
 		
 		//Magneton
@@ -1426,6 +1430,8 @@ public class Pokedex
 		p82.setWeight(60.0);
 		p82.addToTypeList("Electric");
 		p82.addToTypeList("Steel");
+		p82.setSpritePic("resources/82.png");
+		p82.setGender("Unknown");
 		addToDexList(p82);
 		
 		//MagEvoFam
@@ -1442,6 +1448,7 @@ public class Pokedex
 		p83.setWeight(15.0);
 		p83.addToTypeList("Normal");
 		p83.addToTypeList("Flying");
+		p83.setSpritePic("resources/83.png");
 		p83.addToEvoFamily(p83);
 		addToDexList(p83);
 		
@@ -1453,6 +1460,7 @@ public class Pokedex
 		p84.setWeight(39.2);
 		p84.addToTypeList("Normal");
 		p84.addToTypeList("Flying");
+		p84.setSpritePic("resources/84.png");
 		addToDexList(p84);
 		
 		//Dodrio
@@ -1463,6 +1471,7 @@ public class Pokedex
 		p85.setWeight(85.2);
 		p85.addToTypeList("Normal");
 		p85.addToTypeList("Flying");
+		p85.setSpritePic("resources/85.png");
 		addToDexList(p85);
 		
 		//DodEvoFam
@@ -1473,10 +1482,24 @@ public class Pokedex
 		
 		//Seel
 		Pokemon p86 = new Pokemon("Seel");
+		p86.setPokeNum(86);
+		p86.setGeneration(1);
+		p86.setHeight(1.1);
+		p86.setWeight(90.0);
+		p86.addToTypeList("Water");
+		p86.addToTypeList(null);
+		p86.setSpritePic("resources/86.png");
 		addToDexList(p86);
 		
 		//Dewgong
 		Pokemon p87 = new Pokemon("Dewgong");
+		p87.setPokeNum(87);
+		p87.setGeneration(1);
+		p87.setHeight(1.7);
+		p87.setWeight(120.0);
+		p87.addToTypeList("Water");
+		p87.addToTypeList("Ice");
+		p87.setSpritePic("resources/87.png");
 		addToDexList(p87);
 		
 		//SeelEvoFam
@@ -1487,10 +1510,24 @@ public class Pokedex
 		
 		//Grimer
 		Pokemon p88 = new Pokemon("Grimer");
+		p88.setPokeNum(88);
+		p88.setGeneration(1);
+		p88.setHeight(0.9);
+		p88.setWeight(30.0);
+		p88.addToTypeList("Poison");
+		p88.addToTypeList(null);
+		p88.setSpritePic("resources/88.png");
 		addToDexList(p88);
 		
 		//Muk
 		Pokemon p89 = new Pokemon("Muk");
+		p89.setPokeNum(89);
+		p89.setGeneration(1);
+		p89.setHeight(1.2);
+		p89.setWeight(30.0);
+		p89.addToTypeList("Poison");
+		p89.addToTypeList(null);
+		p89.setSpritePic("resources/89.png");
 		addToDexList(p89);
 		
 		//GrimerEvoFam
@@ -1501,10 +1538,24 @@ public class Pokedex
 		
 		//Shellder
 		Pokemon p90 = new Pokemon("Shellder");
+		p90.setPokeNum(90);
+		p90.setGeneration(1);
+		p90.setHeight(0.3);
+		p90.setWeight(4.0);
+		p90.addToTypeList("Water");
+		p90.addToTypeList(null);
+		p90.setSpritePic("resources/90.png");
 		addToDexList(p90);
 		
 		//Cloyster
 		Pokemon p91 = new Pokemon("Cloyster");
+		p91.setPokeNum(91);
+		p91.setGeneration(1);
+		p91.setHeight(1.5);
+		p91.setWeight(132.5);
+		p91.addToTypeList("Water");
+		p91.addToTypeList("Ice");
+		p91.setSpritePic("resources/91.png");
 		addToDexList(p91);
 		
 		//ShellEvoFam
@@ -1515,14 +1566,35 @@ public class Pokedex
 		
 		//Gastly
 		Pokemon p92 = new Pokemon("Gastly");
+		p92.setPokeNum(92);
+		p92.setGeneration(1);
+		p92.setHeight(1.3);
+		p92.setWeight(0.1);
+		p92.addToTypeList("Ghost");
+		p92.addToTypeList("Poison");
+		p92.setSpritePic("resources/92.png");
 		addToDexList(p92);
 		
 		//Haunter
 		Pokemon p93 = new Pokemon("Haunter");
+		p93.setPokeNum(93);
+		p93.setGeneration(1);
+		p93.setHeight(1.6);
+		p93.setWeight(0.1);
+		p93.addToTypeList("Ghost");
+		p93.addToTypeList("Poison");
+		p93.setSpritePic("resources/93.png");
 		addToDexList(p93);
 		
 		//Gengar
 		Pokemon p94 = new Pokemon("Gengar");
+		p94.setPokeNum(94);
+		p94.setGeneration(1);
+		p94.setHeight(1.5);
+		p94.setWeight(40.5);
+		p94.addToTypeList("Ghost");
+		p94.addToTypeList("Poison");
+		p94.setSpritePic("resources/94.png");
 		addToDexList(p94);
 		
 		//GastEvoFam
@@ -1538,15 +1610,36 @@ public class Pokedex
 		
 		//Onix
 		Pokemon p95 = new Pokemon("Onix");
+		p95.setPokeNum(95);
+		p95.setGeneration(1);
+		p95.setHeight(8.8);
+		p95.setWeight(210.0);
+		p95.addToTypeList("Rock");
+		p95.addToTypeList("Ground");
+		p95.setSpritePic("resources/95.png");
 		addToDexList(p95);
 		p95.addToEvoFamily(p95);
 		
 		//Drowzee
 		Pokemon p96 = new Pokemon("Drowzee");
+		p96.setPokeNum(96);
+		p96.setGeneration(1);
+		p96.setHeight(1.0);
+		p96.setWeight(32.4);
+		p96.addToTypeList("Psychic");
+		p96.addToTypeList(null);
+		p96.setSpritePic("resources/96.png");
 		addToDexList(p96);
 		
 		//Hypno
 		Pokemon p97 = new Pokemon("Hypno");
+		p97.setPokeNum(97);
+		p97.setGeneration(1);
+		p97.setHeight(1.6);
+		p97.setWeight(75.6);
+		p97.addToTypeList("Psychic");
+		p97.addToTypeList(null);
+		p97.setSpritePic("resources/97.png");
 		addToDexList(p97);
 		
 		//DrowEvoFam
@@ -1557,10 +1650,24 @@ public class Pokedex
 		
 		//Krabby
 		Pokemon p98 = new Pokemon("Krabby");
+		p98.setPokeNum(98);
+		p98.setGeneration(1);
+		p98.setHeight(0.4);
+		p98.setWeight(6.5);
+		p98.addToTypeList("Water");
+		p98.addToTypeList(null);
+		p98.setSpritePic("resources/98.png");
 		addToDexList(p98);
 		
 		//Kingler
 		Pokemon p99 = new Pokemon("Kingler");
+		p99.setPokeNum(99);
+		p99.setGeneration(1);
+		p99.setHeight(1.3);
+		p99.setWeight(60.0);
+		p99.addToTypeList("Water");
+		p99.addToTypeList(null);
+		p99.setSpritePic("resources/99.png");
 		addToDexList(p99);
 		
 		//KrabEvoFam
@@ -1571,10 +1678,24 @@ public class Pokedex
 		
 		//Voltorb
 		Pokemon p100 = new Pokemon("Voltorb");
+		p100.setPokeNum(100);
+		p100.setGeneration(1);
+		p100.setHeight(0.5);
+		p100.setWeight(10.4);
+		p100.addToTypeList("Electric");
+		p100.addToTypeList(null);
+		p100.setSpritePic("resources/100.png");
 		addToDexList(p100);
 		
 		//Electrode
 		Pokemon p101 = new Pokemon("Electrode");
+		p101.setPokeNum(101);
+		p101.setGeneration(1);
+		p101.setHeight(1.2);
+		p101.setWeight(66.6);
+		p101.addToTypeList("Electric");
+		p101.addToTypeList(null);
+		p101.setSpritePic("resources/101.png");
 		addToDexList(p101);
 		
 		//VoltEvoFam
@@ -1585,10 +1706,24 @@ public class Pokedex
 		
 		//Exeggcute
 		Pokemon p102 = new Pokemon("Exeggcute");
+		p102.setPokeNum(102);
+		p102.setGeneration(1);
+		p102.setHeight(0.4);
+		p102.setWeight(2.5);
+		p102.addToTypeList("Grass");
+		p102.addToTypeList("Psychic");
+		p102.setSpritePic("resources/102.png");
 		addToDexList(p102);
 		
 		//Exeggutor
 		Pokemon p103 = new Pokemon("Exeggutor");
+		p103.setPokeNum(103);
+		p103.setGeneration(1);
+		p103.setHeight(2.0);
+		p103.setWeight(120.0);
+		p103.addToTypeList("Grass");
+		p103.addToTypeList("Psychic");
+		p103.setSpritePic("resources/103.png");
 		addToDexList(p103);
 		
 		//EggEvoFamm
@@ -1599,10 +1734,24 @@ public class Pokedex
 		
 		//Cubone
 		Pokemon p104 = new Pokemon("Cubone");
+		p104.setPokeNum(104);
+		p104.setGeneration(1);
+		p104.setHeight(0.4);
+		p104.setWeight(6.5);
+		p104.addToTypeList("Ground");
+		p104.addToTypeList(null);
+		p104.setSpritePic("resources/104.png");
 		addToDexList(p104);
 		
 		//Marowak
 		Pokemon p105 = new Pokemon("Marowak");
+		p105.setPokeNum(105);
+		p105.setGeneration(1);
+		p105.setHeight(1.0);
+		p105.setWeight(45.0);
+		p105.addToTypeList("Ground");
+		p105.addToTypeList(null);
+		p105.setSpritePic("resources/105.png");
 		addToDexList(p105);
 		
 		//BoneEvoFam
@@ -1613,10 +1762,26 @@ public class Pokedex
 		
 		//Hitmonlee
 		Pokemon p106 = new Pokemon("Hitmonlee");
+		p106.setPokeNum(106);
+		p106.setGeneration(1);
+		p106.setHeight(1.5);
+		p106.setWeight(49.8);
+		p106.addToTypeList("Fighting");
+		p106.addToTypeList(null);
+		p106.setSpritePic("resources/106.png");
+		p106.setGender("Male");
 		addToDexList(p106);
 		
 		//Hitmonchan
 		Pokemon p107 = new Pokemon("Hitmonchan");
+		p107.setPokeNum(107);
+		p107.setGeneration(1);
+		p107.setHeight(1.4);
+		p107.setWeight(50.2);
+		p107.addToTypeList("Fighting");
+		p107.addToTypeList(null);
+		p107.setSpritePic("resources/107.png");
+		p107.setGender("Male");
 		addToDexList(p107);
 		
 		//HitEvoFam
@@ -1627,15 +1792,36 @@ public class Pokedex
 		
 		//Lickitung
 		Pokemon p108 = new Pokemon("Lickitung");
+		p108.setPokeNum(108);
+		p108.setGeneration(1);
+		p108.setHeight(1.2);
+		p108.setWeight(65.5);
+		p108.addToTypeList("Normal");
+		p108.addToTypeList(null);
+		p108.setSpritePic("resources/108.png");
 		addToDexList(p108);
 		p108.addToEvoFamily(p108);
 		
 		//Koffing
 		Pokemon p109 = new Pokemon("Koffing");
+		p109.setPokeNum(109);
+		p109.setGeneration(1);
+		p109.setHeight(0.6);
+		p109.setWeight(1.0);
+		p109.addToTypeList("Poison");
+		p109.addToTypeList(null);
+		p109.setSpritePic("resources/109.png");
 		addToDexList(p109);
 		
 		//Weezing
 		Pokemon p110 = new Pokemon("Weezing");
+		p110.setPokeNum(110);
+		p110.setGeneration(1);
+		p110.setHeight(1.2);
+		p110.setWeight(9.5);
+		p110.addToTypeList("Poison");
+		p110.addToTypeList(null);
+		p110.setSpritePic("resources/110.png");
 		addToDexList(p110);
 		
 		//KoffEvoFam
@@ -1646,10 +1832,24 @@ public class Pokedex
 		
 		//Rhyhorn
 		Pokemon p111 = new Pokemon("Rhyhorn");
+		p111.setPokeNum(111);
+		p111.setGeneration(1);
+		p111.setHeight(1.0);
+		p111.setWeight(115.0);
+		p111.addToTypeList("Ground");
+		p111.addToTypeList("Rock");
+		p111.setSpritePic("resources/111.png");
 		addToDexList(p111);
 		
 		//Rhydon
 		Pokemon p112 = new Pokemon("Rhydon");
+		p112.setPokeNum(112);
+		p112.setGeneration(1);
+		p112.setHeight(1.9);
+		p112.setWeight(120.0);
+		p112.addToTypeList("Ground");
+		p112.addToTypeList("Rock");
+		p112.setSpritePic("resources/112.png");
 		addToDexList(p112);
 		
 		//HornEvoFam
@@ -1660,25 +1860,62 @@ public class Pokedex
 		
 		//Chancey
 		Pokemon p113 = new Pokemon("Chansey");
+		p113.setPokeNum(113);
+		p113.setGeneration(1);
+		p113.setHeight(1.1);
+		p113.setWeight(34.6);
+		p113.addToTypeList("Normal");
+		p113.addToTypeList(null);
+		p113.setSpritePic("resources/113.png");
+		p113.setGender("Female");
 		addToDexList(p113);
 		p113.addToEvoFamily(p113);
 		
 		//Tangela
 		Pokemon p114 = new Pokemon("Tangela");
+		p114.setPokeNum(114);
+		p114.setGeneration(1);
+		p114.setHeight(1.0);
+		p114.setWeight(35.0);
+		p114.addToTypeList("Grass");
+		p114.addToTypeList(null);
+		p114.setSpritePic("resources/114.png");
 		addToDexList(p114);
 		p114.addToEvoFamily(p114);
 		
 		//Kangaskhan
 		Pokemon p115 = new Pokemon("Kangaskhan");
+		p115.setPokeNum(115);
+		p115.setGeneration(1);
+		p115.setHeight(2.2);
+		p115.setWeight(80.0);
+		p115.addToTypeList("Normal");
+		p115.addToTypeList(null);
+		p115.setSpritePic("resources/115.png");
+		p115.setGender("Female");
 		addToDexList(p115);
 		p115.addToEvoFamily(p115);
 		
 		//Horsea
 		Pokemon p116 = new Pokemon("Horsea");
+		p116.setPokeNum(116);
+		p116.setGeneration(1);
+		p116.setHeight(0.4);
+		p116.setWeight(8.0);
+		p116.addToTypeList("Water");
+		p116.addToTypeList(null);
+		p116.setSpritePic("resources/116.png");
 		addToDexList(p116);
 		
 		//Seadra
 		Pokemon p117 = new Pokemon("Seadra");
+		p117.setPokeNum(117);
+		p117.setGeneration(1);
+		p117.setHeight(1.2);
+		p117.setWeight(25.0);
+		p117.addToTypeList("Water");
+		p117.addToTypeList(null);
+		p117.setSpritePic("resources/117.png");
 		addToDexList(p117);
 		
 		//SeaEvoFam
@@ -1689,10 +1926,24 @@ public class Pokedex
 		
 		//Goldeen
 		Pokemon p118 = new Pokemon("Goldeen");
+		p118.setPokeNum(118);
+		p118.setGeneration(1);
+		p118.setHeight(0.6);
+		p118.setWeight(15.0);
+		p118.addToTypeList("Water");
+		p118.addToTypeList(null);
+		p118.setSpritePic("resources/118.png");
 		addToDexList(p118);
 		
 		//Seaking
 		Pokemon p119 = new Pokemon("Seaking");
+		p119.setPokeNum(119);
+		p119.setGeneration(1);
+		p119.setHeight(1.3);
+		p119.setWeight(39.0);
+		p119.addToTypeList("Water");
+		p119.addToTypeList(null);
+		p119.setSpritePic("resources/119.png");
 		addToDexList(p119);
 		
 		//GoldEvoFam
@@ -1703,10 +1954,26 @@ public class Pokedex
 		
 		//Staryu
 		Pokemon p120 = new Pokemon("Staryu");
+		p120.setPokeNum(120);
+		p120.setGeneration(1);
+		p120.setHeight(0.8);
+		p120.setWeight(34.5);
+		p120.addToTypeList("Water");
+		p120.addToTypeList(null);
+		p120.setSpritePic("resources/120.png");
+		p120.setGender("Unknown");
 		addToDexList(p120);
 		
 		//Starmie
 		Pokemon p121 = new Pokemon("Starmie");
+		p121.setPokeNum(121);
+		p121.setGeneration(1);
+		p121.setHeight(1.1);
+		p121.setWeight(80.0);
+		p121.addToTypeList("Water");
+		p121.addToTypeList("Psychic");
+		p121.setSpritePic("resources/121.png");
+		p121.setGender("Unknown");
 		addToDexList(p121);
 		
 		//StarEvoFam
@@ -1717,45 +1984,109 @@ public class Pokedex
 		
 		//Mr. Mime
 		Pokemon p122 = new Pokemon("Mr. Mime");
+		p122.setPokeNum(122);
+		p122.setGeneration(1);
+		p122.setHeight(1.3);
+		p122.setWeight(54.5);
+		p122.addToTypeList("Psychic");
+		p122.addToTypeList("Fairy");
+		p122.setSpritePic("resources/122.png");
 		addToDexList(p122);
 		p122.addToEvoFamily(p122);
 		
 		//Scyther
 		Pokemon p123 = new Pokemon("Scyther");
+		p123.setPokeNum(123);
+		p123.setGeneration(1);
+		p123.setHeight(1.5);
+		p123.setWeight(56.0);
+		p123.addToTypeList("Bug");
+		p123.addToTypeList("Flying");
+		p123.setSpritePic("resources/123.png");
 		addToDexList(p123);
 		p123.addToEvoFamily(p123);
 		
 		//Jynx
 		Pokemon p124 = new Pokemon("Jynx");
+		p124.setPokeNum(124);
+		p124.setGeneration(1);
+		p124.setHeight(1.4);
+		p124.setWeight(40.6);
+		p124.addToTypeList("Ice");
+		p124.addToTypeList("Psychic");
+		p124.setSpritePic("resources/124.png");
 		addToDexList(p124);
 		p124.addToEvoFamily(p124);
 		
 		//Electabuzz
 		Pokemon p125 = new Pokemon("Electabuzz");
+		p125.setPokeNum(125);
+		p125.setGeneration(1);
+		p125.setHeight(1.1);
+		p125.setWeight(30.0);
+		p125.addToTypeList("Electric");
+		p125.addToTypeList(null);
+		p125.setSpritePic("resources/125.png");
 		addToDexList(p125);
 		p125.addToEvoFamily(p125);
 		
 		//Magmar
 		Pokemon p126 = new Pokemon("Magmar");
+		p126.setPokeNum(126);
+		p126.setGeneration(1);
+		p126.setHeight(1.3);
+		p126.setWeight(44.5);
+		p126.addToTypeList("Fire");
+		p126.addToTypeList(null);
+		p126.setSpritePic("resources/126.png");
 		addToDexList(p126);
 		p126.addToEvoFamily(p126);
 		
 		//Pinsir
 		Pokemon p127 = new Pokemon("Pinsir");
+		p127.setPokeNum(127);
+		p127.setGeneration(1);
+		p127.setHeight(1.5);
+		p127.setWeight(55.0);
+		p127.addToTypeList("Bug");
+		p127.addToTypeList(null);
+		p127.setSpritePic("resources/127.png");
 		addToDexList(p127);
 		p127.addToEvoFamily(p127);
 		
 		//Tauros
 		Pokemon p128 = new Pokemon("Tauros");
+		p128.setPokeNum(128);
+		p128.setGeneration(1);
+		p128.setHeight(1.4);
+		p128.setWeight(88.4);
+		p128.addToTypeList("Normal");
+		p128.addToTypeList(null);
+		p128.setSpritePic("resources/128.png");
+		p128.setGender("Male");
 		addToDexList(p128);
 		p128.addToEvoFamily(p128);
 		
 		//Magikarp
 		Pokemon p129 = new Pokemon("Magikarp");
+		p129.setPokeNum(129);
+		p129.setGeneration(1);
+		p129.setHeight(0.9);
+		p129.setWeight(10.0);
+		p129.addToTypeList("Water");
+		p129.addToTypeList(null);
+		p129.setSpritePic("resources/129.png");
 		addToDexList(p129);
 		
 		//Gyarados
 		Pokemon p130 = new Pokemon("Gyarados");
+		p130.setPokeNum(130);
+		p130.setGeneration(1);
+		p130.setHeight(6.5);
+		p130.setWeight(235.0);
+		p130.addToTypeList("Water");
+		p130.addToTypeList("Flying");
+		p130.setSpritePic("resources/130.png");
 		addToDexList(p130);
 		
 		//KarpEvoFam
@@ -1766,28 +2097,71 @@ public class Pokedex
 		
 		//Lapras
 		Pokemon p131 = new Pokemon("Lapras");
+		p131.setPokeNum(131);
+		p131.setGeneration(1);
+		p131.setHeight(2.5);
+		p131.setWeight(220.0);
+		p131.addToTypeList("Water");
+		p131.addToTypeList("Ice");
+		p131.setSpritePic("resources/131.png");
 		addToDexList(p131);
 		p131.addToEvoFamily(p131);
 		
 		//Ditto
 		Pokemon p132 = new Pokemon("Ditto");
+		p132.setPokeNum(132);
+		p132.setGeneration(1);
+		p132.setHeight(0.3);
+		p132.setWeight(4.0);
+		p132.addToTypeList("Normal");
+		p132.addToTypeList(null);
+		p132.setSpritePic("resources/132.png");
+		p132.setGender("Unknown");
 		addToDexList(p132);
 		p132.addToEvoFamily(p132);
 		
 		//Eevee
 		Pokemon p133 = new Pokemon("Eevee");
+		p133.setPokeNum(133);
+		p133.setGeneration(1);
+		p133.setHeight(0.3);
+		p133.setWeight(6.5);
+		p133.addToTypeList("Normal");
+		p133.addToTypeList(null);
+		p133.setSpritePic("resources/133.png");
 		addToDexList(p133);
 		
 		//Vaporeon
 		Pokemon p134 = new Pokemon("Vaporeon");
+		p134.setPokeNum(134);
+		p134.setGeneration(1);
+		p134.setHeight(1.0);
+		p134.setWeight(29.0);
+		p134.addToTypeList("Water");
+		p134.addToTypeList(null);
+		p134.setSpritePic("resources/134.png");
 		addToDexList(p134);
 		
 		//Jolteon
 		Pokemon p135 = new Pokemon("Jolteon");
+		p135.setPokeNum(135);
+		p135.setGeneration(1);
+		p135.setHeight(0.8);
+		p135.setWeight(24.5);
+		p135.addToTypeList("Electric");
+		p135.addToTypeList(null);
+		p135.setSpritePic("resources/135.png");
 		addToDexList(p135);
 		
 		//Flareon
 		Pokemon p136 = new Pokemon("Flareon");
+		p136.setPokeNum(136);
+		p136.setGeneration(1);
+		p136.setHeight(0.9);
+		p136.setWeight(25.0);
+		p136.addToTypeList("Fire");
+		p136.addToTypeList(null);
+		p136.setSpritePic("resources/136.png");
 		addToDexList(p136);
 		
 		//EeveeEvoFam
@@ -1810,15 +2184,37 @@ public class Pokedex
 		
 		//Porygon
 		Pokemon p137 = new Pokemon("Porygon");
+		p137.setPokeNum(137);
+		p137.setGeneration(1);
+		p137.setHeight(0.8);
+		p137.setWeight(36.5);
+		p137.addToTypeList("Normal");
+		p137.addToTypeList(null);
+		p137.setSpritePic("resources/137.png");
+		p137.setGender("Unknown");
 		addToDexList(p137);
 		p137.addToEvoFamily(p137);
 		
 		//Omanyte
 		Pokemon p138 = new Pokemon("Omanyte");
+		p138.setPokeNum(138);
+		p138.setGeneration(1);
+		p138.setHeight(0.4);
+		p138.setWeight(7.5);
+		p138.addToTypeList("Rock");
+		p138.addToTypeList("Water");
+		p138.setSpritePic("resources/138.png");
 		addToDexList(p138);
 		
 		//Omastar
 		Pokemon p139 = new Pokemon("Omastar");
+		p139.setPokeNum(139);
+		p139.setGeneration(1);
+		p139.setHeight(1.0);
+		p139.setWeight(35.0);
+		p139.addToTypeList("Rock");
+		p139.addToTypeList("Water");
+		p139.setSpritePic("resources/139.png");
 		addToDexList(p139);
 		
 		//OmaEvoFam
@@ -1829,10 +2225,24 @@ public class Pokedex
 		
 		//Kabuto
 		Pokemon p140 = new Pokemon("Kabuto");
+		p140.setPokeNum(140);
+		p140.setGeneration(1);
+		p140.setHeight(0.5);
+		p140.setWeight(11.5);
+		p140.addToTypeList("Rock");
+		p140.addToTypeList("Water");
+		p140.setSpritePic("resources/140.png");
 		addToDexList(p140);
 		
 		//Kabutops
 		Pokemon p141 = new Pokemon("Kabutops");
+		p141.setPokeNum(141);
+		p141.setGeneration(1);
+		p141.setHeight(1.3);
+		p141.setWeight(40.5);
+		p141.addToTypeList("Rock");
+		p141.addToTypeList("Water");
+		p141.setSpritePic("resources/141.png");
 		addToDexList(p141);
 		
 		//KabuEvoFam
@@ -1843,11 +2253,25 @@ public class Pokedex
 		
 		//Aerodactyl
 		Pokemon p142 = new Pokemon("Aerodactyl");
+		p142.setPokeNum(142);
+		p142.setGeneration(1);
+		p142.setHeight(1.8);
+		p142.setWeight(59.0);
+		p142.addToTypeList("Rock");
+		p142.addToTypeList("Flying");
+		p142.setSpritePic("resources/142.png");
 		addToDexList(p142);
 		p142.addToEvoFamily(p142);
 		
 		//Snorlax
 		Pokemon p143 = new Pokemon("Snorlax");
+		p143.setPokeNum(143);
+		p143.setGeneration(1);
+		p143.setHeight(2.1);
+		p143.setWeight(460.0);
+		p143.addToTypeList("Normal");
+		p143.addToTypeList(null);
+		p143.setSpritePic("resources/143.png");
 		addToDexList(p143);
 		p143.addToEvoFamily(p143);
 		
@@ -1892,14 +2316,35 @@ public class Pokedex
 		
 		//Dratini
 		Pokemon p147 = new Pokemon("Dratini");
+		p147.setPokeNum(147);
+		p147.setGeneration(1);
+		p147.setHeight(1.8);
+		p147.setWeight(3.3);
+		p147.addToTypeList("Dragon");
+		p147.addToTypeList(null);
+		p147.setSpritePic("resources/147.png");
 		addToDexList(p147);
 		
 		//Dragonair
 		Pokemon p148 = new Pokemon("Dragonair");
+		p148.setPokeNum(148);
+		p148.setGeneration(1);
+		p148.setHeight(4.0);
+		p148.setWeight(16.5);
+		p148.addToTypeList("Dragon");
+		p148.addToTypeList(null);
+		p148.setSpritePic("resources/148.png");
 		addToDexList(p148);
 		
 		//Dragonite
 		Pokemon p149 = new Pokemon("Dragonite");
+		p149.setPokeNum(149);
+		p149.setGeneration(1);
+		p149.setHeight(2.2);
+		p149.setWeight(210.0);
+		p149.addToTypeList("Dragon");
+		p149.addToTypeList("Flying");
+		p149.setSpritePic("resources/149.png");
 		addToDexList(p149);
 		
 		p147.addToEvoFamily(p147);

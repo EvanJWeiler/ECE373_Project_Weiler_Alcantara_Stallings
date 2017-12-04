@@ -1660,6 +1660,19 @@ public class PokedexGUI extends JFrame {
 				}
 			}
 		});
+		buttons.get(77).addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				currPokemon = p1.getDexList().get(77);
+				try {
+					imgLabel.setIcon(new ImageIcon(ImageIO.read(getClass().getResourceAsStream(currPokemon.getSpritePic()))));
+					repaint();
+				} catch (IOException f) {
+					f.printStackTrace();
+				}
+			}
+		});
 		buttons.get(78).addActionListener(new ActionListener() {
 			
 			@Override
