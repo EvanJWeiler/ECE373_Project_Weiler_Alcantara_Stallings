@@ -1106,6 +1106,13 @@ public class Pokedex
 		p59.setSpritePic("resources/59.png");
 		addToDexList(p59);
 		
+		
+		//addEvoFam
+		p58.addToEvoFamily(p58);
+		p58.addToEvoFamily(p59);
+		p59.addToEvoFamily(p58);
+		p59.addToEvoFamily(p59);
+		
 		//Poliwag
 		Pokemon p60 = new Pokemon("Poliwag");
 		p60.setPokeNum(60);
@@ -2165,19 +2172,15 @@ public class Pokedex
 		addToDexList(p136);
 		
 		//EeveeEvoFam
-		p133.addToEvoFamily(p133);
 		p133.addToEvoFamily(p134);
 		p133.addToEvoFamily(p135);
 		p133.addToEvoFamily(p136);
-		p134.addToEvoFamily(p133);
 		p134.addToEvoFamily(p134);
 		p134.addToEvoFamily(p135);
 		p134.addToEvoFamily(p136);
-		p135.addToEvoFamily(p133);
 		p135.addToEvoFamily(p134);
 		p135.addToEvoFamily(p135);
 		p135.addToEvoFamily(p136);
-		p136.addToEvoFamily(p133);
 		p136.addToEvoFamily(p134);
 		p136.addToEvoFamily(p135);
 		p136.addToEvoFamily(p136);
@@ -2284,6 +2287,7 @@ public class Pokedex
 		p144.setWeight(55.4);
 		p144.addToTypeList("Ice");
 		p144.addToTypeList("Flying");
+		p144.setGender("Unknown");
 		p144.setSpritePic("resources/144.png");
 		p144.addToEvoFamily(p144);
 		addToDexList(p144);
@@ -2297,6 +2301,7 @@ public class Pokedex
 		p145.setWeight(52.6);
 		p145.addToTypeList("Electric");
 		p145.addToTypeList("Flying");
+		p145.setGender("Unknown");
 		p145.setSpritePic("resources/145.png");
 		p145.addToEvoFamily(p145);
 		addToDexList(p145);
@@ -2310,6 +2315,7 @@ public class Pokedex
 		p146.setWeight(60.0);
 		p146.addToTypeList("Fire");
 		p146.addToTypeList("Flying");
+		p146.setGender("Unknown");
 		p146.setSpritePic("resources/146.png");
 		p146.addToEvoFamily(p146);
 		addToDexList(p146);
@@ -2366,6 +2372,7 @@ public class Pokedex
 		p150.setWeight(122.0);
 		p150.addToTypeList("Psychic");
 		p150.addToTypeList(null);
+		p150.setGender("Unknown");
 		p150.setSpritePic("resources/150.png");
 		p150.addToEvoFamily(p150);
 		addToDexList(p150);
@@ -2379,6 +2386,7 @@ public class Pokedex
 		p151.setWeight(4.0);
 		p151.addToTypeList("Psychic");
 		p151.addToTypeList(null);
+		p151.setGender("Unknown");
 		p151.setSpritePic("resources/151.png");
 		p151.addToEvoFamily(p151);
 		addToDexList(p151);
