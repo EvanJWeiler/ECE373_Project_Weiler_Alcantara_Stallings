@@ -105,6 +105,7 @@ public class PokedexGUI extends JFrame {
 		picPanel.setAlignmentX(RIGHT_ALIGNMENT);
 		scrollPanel.setPreferredSize(new Dimension(200, 400));
 		scrollPanel.setAlignmentX(LEFT_ALIGNMENT);
+		scrollPanel.getVerticalScrollBar().setUnitIncrement(10);
 		topPanel.add(scrollPanel);
 		topPanel.add(picPanel);
 		bottomPanel.add(searchButton);
